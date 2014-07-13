@@ -55,8 +55,14 @@ function showNav() {
     } else {
         $('.navtool').stop().animate({"opacity": '0.0'});
     }
+    if ($(window).scrollTop() >= 3 * $(window).height()) {
+        $('.navtool2').stop().animate({"opacity": '1.0'});
+    } else {
+        $('.navtool2').stop().animate({"opacity": '0.0'});
+    }
 }
 $(document).ready(function(){
+	var currentSect = "#sect1";
 	$("#coverheader").lettering();
 	toggleMenu();
 	for (var i = 1; i <= 7; i++) {
@@ -86,8 +92,28 @@ $(document).ready(function(){
 					$('html,body').animate({
 					scrollTop: target.offset().top
 					}, 1000);
+					var tester = target.selector.slice(1,5);
+					if(tester === "sect") {
+						currentSect = target.selector;
+					};
 					return false;
 				}
+			}
+		});
+		$("#navup").click(function() {
+			if($(currentSect).prev() !== undefined) {
+				$('html,body').animate({
+				scrollTop: $(currentSect).prev().offset().top
+				}, 1000);
+				currentSect = $(currentSect).prev();
+			}
+		});
+		$("#navdown").click(function() {
+			if($(currentSect).next() !== undefined) {
+				$('html,body').animate({
+				scrollTop: $(currentSect).next().offset().top
+				}, 1000);
+				currentSect = $(currentSect).next();
 			}
 		});
 	});

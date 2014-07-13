@@ -61,6 +61,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   	opacity: 0.0;
   	text-decoration: none;
   	overflow: scroll;
+  	overflow-x: hidden;
 }
 
 #links ul li a {
