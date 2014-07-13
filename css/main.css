@@ -8,16 +8,13 @@ body {
 	background-color: #FFF8AF;
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 2em;
+	overflow: auto;
 }
 main {
 	-webkit-transition: 0.55s 0.5s;
 	-moz-transition: 0.55s 0.5s;
   	transition: 0.55s 0.5s;
   	padding-right: 5vw;
-}
-
-p {
-	text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,11 +26,26 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 #navmenu {
-	margin-left: 95vw;
+	margin-left: 94.75vw;
 	margin-top: 1em;
 	z-index: 10001;
 	position: fixed;
 	opacity: 0.0;
+}
+
+#navupdown {
+	margin-left: 94.5vw;
+	margin-top: 4em;
+	z-index: 10001;
+	position: fixed;
+	opacity: 0.0;
+}
+
+#navupdown span {
+	cursor: pointer;
+	-webkit-transition: 0.55s 0.5s;
+	-moz-transition: 0.55s 0.5s;
+  	transition: 0.55s 0.5s;
 }
 
 #links {
@@ -47,6 +59,21 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   	position: fixed;
   	z-index: 10000;
   	opacity: 0.0;
+  	text-decoration: none;
+  	overflow: scroll;
+}
+
+#links ul li a {
+	text-decoration: none;
+	color: #FFFFFF;
+	-webkit-transition: color 0.5s;
+	-moz-transition: color 0.5s;
+  	transition: color 0.5s;
+}
+
+#links ul li a:hover, #links ul li a:active, #links ul li a:focus {
+	text-decoration: none;
+	color: #FFD12F;
 }
 
 .misconception {
@@ -56,6 +83,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 .indented {
 	text-indent: 3em;
+	text-align: justify;
 }
 
 .container-fluid {
@@ -71,7 +99,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 #cover div {
 	position: absolute;
 	height: 4.875em;
-	top: 25%;
+	top: 20%;
 	margin-top: -2.4375em;
 	width: 100vw;
 	margin: 0 auto 0 auto;
