@@ -100,6 +100,7 @@ $(document).ready(function(){
 	$("#switchpage").tooltip();
 	$(".navtool").tooltip();
 	$(".navtool2").tooltip();
+	$("main").scrollspy({ target: '#listentries' })
 	for (var i = 1; i <= 7; i++) {
 		var object = ".char" + i;
 		$(object).addClass('animated');

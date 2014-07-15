@@ -71,23 +71,23 @@
         </div>
         <div style="margin-top: -100vh; position: fixed; z-index: 100000" id="easter"><img src="assets/favicons/favicon-310.png"></div>
         <a href="index.html"><span class="glyphicon glyphicon-home" style="font-size: 1.5em; color: #333; margin-left: 0.25em; margin-top: 0.25em; position: fixed; z-index: 100000; opacity: 0.25;" id="switchpage" data-toggle="tooltip" data-placement="right" title="Why PC?"></span></a>
-        <div class="menu navtool hidden-xs" id="navmenu" data-toggle="tooltip" data-placement="left" title="Navigation">
+        <div class="menu navtool hidden-xs" id="navmenu">
             <span class="menu-global menu-top"></span>
             <span class="menu-global menu-middle"></span>
             <span class="menu-global menu-bottom"></span>
         </div>
         <div class="navtool" id="navupdown">
-            <span class="glyphicon glyphicon-circle-arrow-up navarrow" style="font-size: 2.3em; color: #333;"id="navup" data-toggle="tooltip" data-placement="left" title="Previous Section"></span>
-            <span class="glyphicon glyphicon-circle-arrow-down navarrow" style="font-size: 2.3em; color: #333;"id="navdown" data-toggle="tooltip" data-placement="left" title="Next Section"></span>
-            <span class="glyphicon glyphicon-refresh navarrow hidden-xs" style="font-size: 2.3em; color: #333;"id="navfix" data-toggle="tooltip" data-placement="left" title="Current Section"></span>
+            <span class="glyphicon glyphicon-circle-arrow-up navarrow" style="font-size: 2.3em; color: #333;"id="navup" title="Previous Section"></span>
+            <span class="glyphicon glyphicon-circle-arrow-down navarrow" style="font-size: 2.3em; color: #333;"id="navdown" title="Next Section"></span>
+            <span class="glyphicon glyphicon-refresh navarrow hidden-xs" style="font-size: 2.3em; color: #333;"id="navfix" title="Current Section"></span>
         </div>
-        <div class="navtool hidden-xs" id="links">
-            <ul>
+        <nav class="navtool hidden-xs" id="links">
+            <ul class="nav" style="width: 12em;" id="listentries">
                 <li><a href="#cover">Top</a></li>
                 <li><a href="#sect1">Info</a></li>
                 <li><a href="#sect1">Build One</a></li>
             </ul>
-        </div>
+        </nav>
         <div class="container-fluid" id="cover">
             <div style="text-align: center;">
                 <h1><span style="font-size: 6em;" id="coverheader">PC Builds</span><br><br>
@@ -95,7 +95,7 @@
                 <a href="#builds"><span class="glyphicon glyphicon-circle-arrow-down animated pulse" style="font-size: 4em; color: #E8AE1F;"></span></a>
             </div>
         </div>
-        <main>
+        <main data-spy="scroll" data-target="#listentries">
             <div class="container-fluid" id="builds">
                 <section class="build" id="sect1">
                     <span class="text-center">

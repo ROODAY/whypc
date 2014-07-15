@@ -16,6 +16,7 @@ main {
 	-moz-transition: 0.55s 0.5s;
   	transition: 0.55s 0.5s;
   	padding-right: 5vw;
+  	position: relative;
 }
 
 footer {
@@ -74,6 +75,10 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   	text-decoration: none;
   	overflow: scroll;
   	overflow-x: hidden;
+}
+
+#listentries li a:hover, #listentries li a:active, #listentries li a:focus {
+	background-color: #666;
 }
 
 #links ul li a {
