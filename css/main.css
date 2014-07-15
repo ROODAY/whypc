@@ -17,6 +17,7 @@ main {
   	transition: 0.55s 0.5s;
   	padding-right: 5vw;
   	position: relative;
+  	margin-left: 5vw;
 }
 
 footer {
