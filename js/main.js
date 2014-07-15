@@ -1,3 +1,7 @@
+$(window).load(function() {
+	$("#loading").fadeOut('slow');
+});
+
 var menuOn = true;
 
 var Menu = {

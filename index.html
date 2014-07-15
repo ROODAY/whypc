@@ -8,7 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Why PC?</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+        <meta name="msapplication-tap-highlight" content="no" />
         <meta name="msapplication-TileColor" content="#FFFFFF">
         <meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
         <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
@@ -31,8 +32,29 @@
         
         <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
-
+        
         <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <style>
+            #loading {
+                width: 100vw;
+                height: 100vh;
+                background-color: #FFF8AF;
+                font-size: 2em;
+                font-family: 'Comfortaa', serif;
+                position: fixed;
+                z-index: 1000000;
+            }
+            #loading * {
+                display: block;
+            }
+            #loading span {
+                margin-top: 40vh;
+                margin-left: 42vw;
+            }
+            #loading svg {
+                margin-left: 43vw;
+            }
+        </style>
         <link rel="stylesheet" href="css/vendor/animate.css">
         <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="css/main.css">
@@ -43,6 +65,24 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id="loading">
+            <span>Loading...</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="128" height="128" fill="#E8AE1F">
+              <circle transform="translate(8 0)" cx="0" cy="16" r="0"> 
+                <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0"
+                  keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+              </circle>
+              <circle transform="translate(16 0)" cx="0" cy="16" r="0"> 
+                <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.3"
+                  keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+              </circle>
+              <circle transform="translate(24 0)" cx="0" cy="16" r="0"> 
+                <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.6"
+                  keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+              </circle>
+            </svg>
+        </div>
+        <!--div style="margin-top: -100vh; position: fixed; z-index: 100000" id="easter"><img src="assets/favicons/favicon-310.png"></div-->
         <div class="menu navtool" id="navmenu">
             <span class="menu-global menu-top"></span>
             <span class="menu-global menu-middle"></span>
@@ -664,6 +704,7 @@
                 });
             })(jQuery);
         </script>
+        <script src="js/easter.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
