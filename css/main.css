@@ -186,3 +186,33 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   -webkit-transition: 0.55s 0.5s;
   transition: 0.55s 0.5s;
 }
+
+/*phones*/
+@media (max-width: 767px) {
+	#navupdown {
+		margin-left: 91.4vw;
+		font-size: 0.9em;
+	}
+	#cover div {
+		margin-top: -1.75em;
+	}
+}
+/*tablets*/
+@media (min-width: 768px) and (max-width: 991px) {
+	#navupdown {
+		margin-left: 92vw;
+		font-size: 0.95em;
+	}
+	#cover div {
+		margin-top: -2em;
+	}
+}
+/*small desktops/laptops*/
+@media (min-width: 992px) and (max-width: 1199px) {
+	#navmenu {
+		margin-left: 93.5vw
+	}
+	#navupdown {
+		margin-left: 93.25vw;
+	}
+}

@@ -101,7 +101,7 @@ $(document).ready(function(){
 	$(".navtool").tooltip();
 	$(".navtool2").tooltip();
 	$("main").scrollspy({ target: '#listentries' })
-	for (var i = 1; i <= 7; i++) {
+	/*for (var i = 1; i <= 7; i++) {
 		var object = ".char" + i;
 		$(object).addClass('animated');
 		$(object).addClass('bounce');
@@ -109,7 +109,7 @@ $(document).ready(function(){
 			$(object).removeClass('animated');
 			$(object).removeClass('bounce');
 		});
-	};
+	};*/
 
 	$(window).scroll(function () {
 		showNav();
