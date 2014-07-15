@@ -1,5 +1,7 @@
 $(window).load(function() {
-	$("#loading").fadeOut('slow');
+	setTimeout(function() {
+		$("#loading").fadeOut('slow');
+	}, 1500);
 });
 
 var menuOn = true;
