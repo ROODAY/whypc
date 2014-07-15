@@ -98,6 +98,8 @@ $(document).ready(function(){
 	$("#coverheader").lettering();
 	toggleMenu();
 	$("#switchpage").tooltip();
+	$(".navtool").tooltip();
+	$(".navtool2").tooltip();
 	for (var i = 1; i <= 7; i++) {
 		var object = ".char" + i;
 		$(object).addClass('animated');
