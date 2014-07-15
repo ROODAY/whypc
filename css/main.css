@@ -18,12 +18,23 @@ main {
   	padding-right: 5vw;
 }
 
+footer {
+	background-color: #333;
+	color: #fff;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Comfortaa', serif;
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-family: 'Noto Sans', sans-serif;
+}
+
+#switchpage {
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+  	transition: opacity 0.5s;
 }
 
 #navmenu {
@@ -78,7 +89,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	color: #FFD12F;
 }
 
-.misconception {
+.heading {
 	font-size: 2.5em;
 	color: #C68C0D;
 }
@@ -113,7 +124,6 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	animation-iteration-count: infinite;
 }
 
-/* Credit to http://codepen.io/icutpeople/pen/Kcxdp */
 .menu {
   cursor: pointer;
   margin: 0 auto;

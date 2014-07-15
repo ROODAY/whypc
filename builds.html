@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Why PC?</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
+        <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+
+        <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32 64x64" href="assets/favicons/favicon.ico">
+        <link rel="icon" type="image/png" sizes="196x196" href="assets/favicons/favicon-196.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="assets/favicons/favicon-160.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="assets/favicons/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/favicon-76.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/favicon-72.png">
+        <link rel="apple-touch-icon" href="assets/favicons/favicon-57.png">
+        
+        <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <style>
+            #loading {
+                width: 100vw;
+                height: 100vh;
+                background-color: #FFF8AF;
+                font-size: 2em;
+                font-family: 'Comfortaa', serif;
+                position: fixed;
+                z-index: 1000000;
+            }
+            #loading * {
+                display: block;
+            }
+            #loading span {
+                margin-top: 40vh;
+                margin-left: 42vw;
+            }
+            #loading img {
+                margin-left: 43vw;
+            }
+        </style>
+        <link rel="stylesheet" href="css/vendor/animate.css">
+        <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="loading">
+            <span>Loading...</span>
+            <img src="assets/images/loading.svg" alt="Loading icon" />
+        </div>
+        <div style="margin-top: -100vh; position: fixed; z-index: 100000" id="easter"><img src="assets/favicons/favicon-310.png"></div>
+        <a href="index.html"><span class="glyphicon glyphicon-home" style="font-size: 1.5em; color: #333; margin-left: 0.25em; margin-top: 0.25em; position: fixed; z-index: 100000; opacity: 0.25;" id="switchpage"></span></a>
+        <div class="menu navtool hidden-xs" id="navmenu">
+            <span class="menu-global menu-top"></span>
+            <span class="menu-global menu-middle"></span>
+            <span class="menu-global menu-bottom"></span>
+        </div>
+        <div class="navtool" id="navupdown">
+            <span class="glyphicon glyphicon-circle-arrow-up navarrow" style="font-size: 2.3em; color: #333;"id="navup"></span>
+            <span class="glyphicon glyphicon-circle-arrow-down navarrow" style="font-size: 2.3em; color: #333;"id="navdown"></span>
+            <span class="glyphicon glyphicon-refresh navarrow hidden-xs" style="font-size: 2.3em; color: #333;"id="navfix"></span>
+        </div>
+        <div class="navtool hidden-xs" id="links">
+            <ul>
+                <li><a href="#cover">Top</a></li>
+                <li><a href="#sect1">Info</a></li>
+                <li><a href="#sect1">Build One</a></li>
+            </ul>
+        </div>
+        <div class="container-fluid" id="cover">
+            <div style="text-align: center;">
+                <h1><span style="font-size: 6em;" id="coverheader">PC Builds</span><br><br>
+                <small>Ready to build? Here's some ideas!</small></h1><br>
+                <a href="#builds"><span class="glyphicon glyphicon-circle-arrow-down animated pulse" style="font-size: 4em; color: #E8AE1F;"></span></a>
+            </div>
+        </div>
+        <main>
+            <div class="container-fluid" id="builds">
+                <section class="build" id="sect1">
+                    <span class="text-center">
+                        <h1>Some Things to Know<br>
+                        <small>Not too much</small></h1>
+                    </span>
+                    <p class="lead indented">
+                        Info on PC Builds.
+                    </p>
+                    <p class="indented">
+                        Know these things first.
+                    </p>
+                </section>
+                <section class="build" id="sect2">
+                    <p class="lead heading">
+                        <strong>The Build of Swag</strong>
+                    </p>
+                    <p class="indented">
+                        Here's some parts
+                    </p>
+                </section>
+            </div>
+        </main>
+        <footer>
+            Credits<br>
+            For menu hamburger Credit to http://codepen.io/icutpeople/pen/Kcxdp<br>
+            For icon font: halfings from bootstrap<br>
+            For wiki content: get person<br>
+            For loading svg : jxnblck loading github<br>
+            ROODAY<br>
+        </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="videojs/video.js"></script>
+        <script>
+          videojs.options.flash.swf = "videojs/video-js.swf"
+        </script>
+        <script>
+            (function($){
+                $(window).load(function(){
+                    $("body, #links").mCustomScrollbar();
+                });
+            })(jQuery);
+        </script>
+        <script src="js/easter.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

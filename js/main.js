@@ -39,6 +39,7 @@ var Menu = {
 
 Menu.init();
 
+var currentSect = "#sect1";
 function toggleMenu() {
 	if(!menuOn) {
 		$("#links").css("margin-left", "75vw");
@@ -68,7 +69,6 @@ function showNav() {
     }
 }
 $(document).ready(function(){
-	var currentSect = "#sect1";
 	$("#coverheader").lettering();
 	toggleMenu();
 	for (var i = 1; i <= 7; i++) {
@@ -87,6 +87,13 @@ $(document).ready(function(){
 
 	$(".menu").click(function() {
 		toggleMenu();
+	});
+
+	$("#switchpage").mouseenter(function() {
+		$(this).css("opacity", "1.0");
+	});
+	$("#switchpage").mouseleave(function() {
+		$(this).css("opacity", "0.25");
 	});
 
 	$(function() {
@@ -121,6 +128,11 @@ $(document).ready(function(){
 				}, 1000);
 				currentSect = $(currentSect).next();
 			}
+		});
+		$("#navfix").click(function() {
+			$('html,body').animate({
+			scrollTop: $(currentSect).offset().top
+			}, 1000);
 		});
 	});
 });
