@@ -188,6 +188,15 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   transition: 0.55s 0.5s;
 }
 
+footer div {
+	display: inline-block;
+}
+
+#credits {
+	margin: 0 auto 0 auto;
+	top: 1em;
+}
+
 /*phones*/
 @media (max-width: 767px) {
 	#navupdown {
