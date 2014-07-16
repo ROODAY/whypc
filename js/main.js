@@ -111,8 +111,20 @@ $(document).ready(function(){
 		});
 	};*/
 
-	$(window).scroll(function () {
+	var lastScrollTop = 0;
+	$(window).scroll(function(event){
 		showNav();
+	   	var st = $(this).scrollTop();
+	   	if (st > lastScrollTop){
+	    	if ($(window).scrollTop() > $(currentSect).next().offset().top) {
+	    		currentSect = $(currentSect).next();
+	    	}
+	    } else {
+	       if ($(window).scrollTop() < $(currentSect).prev().offset().top) {
+	    		currentSect = $(currentSect).prev();
+	    	}
+	    }
+	    lastScrollTop = st;
 	});
 
 	$(".menu").click(function() {
