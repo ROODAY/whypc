@@ -97,9 +97,7 @@ function showNav() {
 $(document).ready(function(){
 	$("#coverheader").lettering();
 	toggleMenu();
-	$("#switchpage").tooltip();
-	$(".navtool").tooltip();
-	$(".navtool2").tooltip();
+	$(".tooltipper").tooltip();
 	$("main").scrollspy({ target: '#listentries' })
 	/*for (var i = 1; i <= 7; i++) {
 		var object = ".char" + i;
