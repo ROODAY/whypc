@@ -1,1 +1,4 @@
-ErrorDocument 404 /errors/404.html
+<Files "users.db">
+Order Allow,Deny
+Deny from all
+</Files>
