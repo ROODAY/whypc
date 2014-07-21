@@ -1,5 +1,0 @@
-{
-  "name": "whypc",
-  "scripts": ["js/vendor/jquery-1.11.0.min.js", "js/vendor/hull.js", "js/vendor/bootstrap.min.js", "js/plugins.js", "videojs/video.js", "js/easter.js", "js/main.js"],
-  "styles": ["css/vendor/bootstrap.min.css", "css/vendor/animate.css", "css/vendor/jquery.mCustomScrollbar.css", "css/main.css"]
-}
