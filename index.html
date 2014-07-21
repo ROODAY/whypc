@@ -56,7 +56,7 @@
             }
         </style>
         <link rel="stylesheet" href="css/vendor/animate.css">
-        <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -161,7 +161,7 @@
                 <p class="lead indented">
                     Once upon a time, console manufacturers cared about the consumer and made great consoles. They vastly outperformed PCs of the era, and had a great selection of games.
                 </p>
-                <p class="indented">
+                <p class="indented" data-hull-component="side-comments">
                     This guide isn't trying to hide the truth. Back before the 90's, consoles like the SNES, N64, and the rest of the "golden age" consoles all the way down to the original XBox and PS2, blew PCs out of the water. During that time, PCs were barely more than word processors, and cost the average consumer way more than a gaming console. Not to mention that back then, consoles were constantly innovating in attempts to outperform each other and provide the best possible system to gamers everywhere. Gaming as it is now started with the consoles of the early 80s. But, then came 1985. The Apple II and Commodore 64 skyrocketed PC popularity, and ever since then, PCs have been gaining in power, game library, and innovation. And since the stagnation of the XBox 360 and PS3 era, consoles have been becoming less and less of a good investment, while PCs have just been getting better.
                 </p>
             </div>
@@ -712,7 +712,7 @@
         </main>
         <footer>
             <div>
-                Design by <img src="/home/rooday/github/fmps/assets/images/rooday.png" width="20" height="20">OODAY
+                Design by <img src="assets/images/rooday.png" width="20" height="20">OODAY
             </div>
             <div id="credits">
                 Credits
@@ -733,6 +733,16 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="//d3f5pyioow99x0.cloudfront.net/0.8/hull.js"></script>
+        <script>
+            Hull.init({
+              "appId": "53ccc52c7b89f55f67000b2b",
+              "orgUrl": "https://66abd637.hullapp.io",
+              sources: {
+                 default: 'components'
+               }
+            });
+        </script>
         <script src="js/plugins.js"></script>
         <script src="videojs/video.js"></script>
         <script>

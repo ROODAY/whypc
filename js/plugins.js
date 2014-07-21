@@ -1,3 +1,5 @@
+//Plugins used: Lettering.js, tweenmax, scrollmagic, scrollmagic debug, hammer.js, keypress.js
+
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
