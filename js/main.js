@@ -1,3 +1,19 @@
+Hull.init({
+  "appId": "53ccc52c7b89f55f67000b2b",
+  "orgUrl": "https://66abd637.hullapp.io",
+  sources: {
+     default: 'components'
+   }
+});
+
+videojs.options.flash.swf = "videojs/video-js.swf";
+
+(function($){
+    $(window).load(function(){
+        $("body, #links").mCustomScrollbar();
+    });
+})(jQuery);
+
 $(window).load(function() {
 	setTimeout(function() {
 		$("#loading").fadeOut('slow');

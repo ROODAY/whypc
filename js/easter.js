@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var tapcount = 0;
+	/*var tapcount = 0;
 	var myElement = document.getElementById('cover');
 	var mc = new Hammer(myElement);
 	mc.get('pinch').set({ enable: true });
@@ -25,7 +25,7 @@ $(document).ready(function() {
 	});
 	if(tapcount >= 3) {
 		$("#easter").css("margin-top", "0");
-	};
+	};*/
 
 	var listener = new window.keypress.Listener();
 	listener.sequence_combo("up up down down left right left right b a enter", function() {
