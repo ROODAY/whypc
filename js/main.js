@@ -1,7 +1,7 @@
 $(window).load(function() {
 	setTimeout(function() {
 		$("#loading").fadeOut('slow');
-	}, 1500);
+	}, 500);
 });
 
 var menuOn = true;
@@ -98,6 +98,7 @@ $(document).ready(function(){
 	$("#coverheader").lettering();
 	toggleMenu();
 	$(".tooltipper").tooltip();
+	addAnchors('.anchored');
 	$("main").scrollspy({ target: '#listentries' })
 	/*for (var i = 1; i <= 7; i++) {
 		var object = ".char" + i;
@@ -114,13 +115,17 @@ $(document).ready(function(){
 		showNav();
 	   	var st = $(this).scrollTop();
 	   	if (st > lastScrollTop){
-	    	if ($(window).scrollTop() > $(currentSect).next().offset().top) {
-	    		currentSect = $(currentSect).next();
-	    	}
+	   		if ($(currentSect).next().offset()) {
+		    	if ($(window).scrollTop() > $(currentSect).next().offset().top) {
+		    		currentSect = $(currentSect).next();
+		    	}
+		    }
 	    } else {
-	       if ($(window).scrollTop() < $(currentSect).prev().offset().top) {
-	    		currentSect = $(currentSect).prev();
-	    	}
+	    	if ($(currentSect).prev().offset()) {
+		      	if ($(window).scrollTop() < $(currentSect).prev().offset().top) {
+		    		currentSect = $(currentSect).prev();
+		    	}
+		    }
 	    }
 	    lastScrollTop = st;
 	});
