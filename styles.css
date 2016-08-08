@@ -73,3 +73,16 @@ header {
 #page-title {
   text-align: center;
 }
+
+.text-left {
+  text-align: left !important;
+}
+
+table {
+  margin: 0 auto 16px auto !important;
+}
+
+img {
+  max-width: 100% !important;
+  margin: auto;
+}
