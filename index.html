@@ -1,755 +1,242 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Why PC?</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="msapplication-TileColor" content="#FFFFFF">
-        <meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
-        <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Why PC?</title>
 
-        <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-        <link rel="icon" sizes="16x16 32x32 64x64" href="assets/favicons/favicon.ico">
-        <link rel="icon" type="image/png" sizes="196x196" href="assets/favicons/favicon-196.png">
-        <link rel="icon" type="image/png" sizes="160x160" href="assets/favicons/favicon-160.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96.png">
-        <link rel="icon" type="image/png" sizes="64x64" href="assets/favicons/favicon-64.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/favicon-152.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/favicon-144.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/favicon-120.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/favicon-114.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/favicon-76.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/favicon-72.png">
-        <link rel="apple-touch-icon" href="assets/favicons/favicon-57.png">
-        
-        <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
-        
-        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-        <style>
-            #loading {
-                width: 100vw;
-                height: 100vh;
-                background-color: #FFF8AF;
-                font-size: 2em;
-                font-family: 'Comfortaa', serif;
-                position: fixed;
-                z-index: 1000000;
-            }
-            #loading * {
-                display: block;
-            }
-            #loading span {
-                margin-top: 40vh;
-                margin-left: 42vw;
-            }
-            #loading img {
-                margin-left: 43vw;
-            }
-        </style>
-        <link rel="stylesheet" href="css/vendor/animate.css">
-        <link rel="stylesheet" href="css/vendor/anchor.css">
-        <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css">
-        <link rel="stylesheet" href="css/main.css">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div id="loading">
-            <span>Loading...</span>
-            <img src="assets/images/loading.svg" alt="Loading icon" />
-        </div>
-        <div style="margin-top: -100vh; position: fixed; z-index: 100000" id="easter"><img src="assets/favicons/favicon-310.png"></div>
-        <a href="builds.html"><span class="glyphicon glyphicon-th-list tooltipper" style="font-size: 1.5em; color: #333; margin-left: 0.25em; margin-top: 0.25em; position: fixed; z-index: 100000; opacity: 0.25;" id="switchpage" data-toggle="tooltip" data-placement="right" title="PC Builds"></span></a>
-        <div class="menu navtool hidden-xs hidden-sm" id="navmenu">
-            <span class="menu-global menu-top"></span>
-            <span class="menu-global menu-middle"></span>
-            <span class="menu-global menu-bottom"></span>
-        </div>
-        <div class="navtool2" id="navupdown">
-            <span class="glyphicon glyphicon-circle-arrow-up navarrow" style="font-size: 2.3em; color: #333;"id="navup" title="Previous Section"></span>
-            <span class="glyphicon glyphicon-circle-arrow-down navarrow" style="font-size: 2.3em; color: #333;"id="navdown" title="Next Section"></span>
-            <span class="glyphicon glyphicon-refresh navarrow hidden-xs hidden-sm" style="font-size: 2.3em; color: #333;"id="navfix" title="Current Section"></span>
-        </div>
-        <nav class="navtool hidden-xs hidden-sm" id="links">
-            <ul class="nav" style="width: 12em;" id="listentries">
-                <li><a href="#cover">Top</a></li>
-                <li><a href="#goodconsoles">Good Consoles</a></li>
-                <li><a href="#badconsoles">Bad Consoles</a></li>
-                <li><a href="#sect1">Summary</a></li>
-                <li><a href="#sect2">PC vs. Console Price</a></li>
-                <li><a href="#sect3">Performace and Quality Ceiling</a></li>
-                <li><a href="#sect4">Building vs. Buying</a></li>
-                <li><a href="#sect5">Building isn't Hard</a></li>
-                <li><a href="#sect6">OSX/Linux</a></li>
-                <li><a href="#sect7">Price of PC Games</a></li>
-                <li><a href="#sect8">Virtual Reality</a></li>
-                <li><a href="#sect9">ESPorts</a></li>
-                <li><a href="#sect10">Compatibility</a></li>
-                <li><a href="#sect11">Social Capability</a></li>
-                <li><a href="#sect12">Family Friendliness</a></li>
-                <li><a href="#sect13">Media Consumption</a></li>
-                <li><a href="#sect14">Socially Capable</a></li>
-                <li><a href="#sect15">Local Multiplayer</a></li>
-                <li><a href="#sect16">Online Features</a></li>
-                <li><a href="#sect17">Online Play</a></li>
-                <li><a href="#sect18">Modding</a></li>
-                <li><a href="#sect19">Shapes and Sizes</a></li>
-                <li><a href="#sect20">Tax Write-Offs</a></li>
-                <li><a href="#sect21">30 vs 60 FPS</a></li>
-                <li><a href="#sect22">Sub 46 FPS Eye Strain</a></li>
-                <li><a href="#sect23">60 vs 90 FOV</a></li>
-                <li><a href="#sect24">Academic Studies on FPS</a></li>
-                <li><a href="#sect25">Optimization</a></li>
-                <li><a href="#sect26">Overclocking</a></li>
-                <li><a href="#sect27">Sharing Games</a></li>
-                <li><a href="#sect28">Games are always yours</a></li>
-                <li><a href="#sect29">Couch Gaming</a></li>
-                <li><a href="#sect30">Needs revising</a></li>
-                <li><a href="#sect31">Consoles are still behind PCs</a></li>
-                <li><a href="#sect32">Needs revision</a></li>
-                <li><a href="#sect33">Cleaning/Upgrading/Repairs</a></li>
-                <li><a href="#sect34">Warranties</a></li>
-                <li><a href="#sect35">Voice Communication</a></li>
-                <li><a href="#sect36">Platform Exclusives</a></li>
-                <li><a href="#sect37">Input Devices</a></li>
-                <li><a href="#sect38">Legacy Support</a></li>
-                <li><a href="#sect39">Terminalization</a></li>
-                <li><a href="#sect40">Capture Cards</a></li>
-                <li><a href="#sect41">Spare Processing</a></li>
-                <li><a href="#sect42">PC Gaming</a></li>
-                <li><a href="#sect43">Consoles don't Innovate</a></li>
-                <li><a href="#sect44">Companies make more money from PC</a></li>
-                <li><a href="#sect45">Used Game Sales are bad</a></li>
-                <li><a href="#sect46">Piracy</a></li>
-                <li><a href="#sect47">"Next-Gen" Gameplay/Screenshots</a></li>
-                <li><a href="#sect48">Console Gamers are not the Enemy</a></li>
-                <li><a href="#sect49">Further Reading</a></li>
-                <li><a href="#sect50">Author's Note</a></li>
-                <li><a href="#sect51">Editor's Note</a></li>
-                <li><a href="#sect52">Sharing this Guide</a></li>
-                <li><a href="#sect53">Reader Response</a></li>
-                <li><a href="#sect54">Translations</a></li>
-                <li><a href="#sect55">Statistics</a></li>
-                <li><a href="#sect56">Suggestions</a></li>
-                <li><a href="#sect57">Poll</a></li>
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic'>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//code.getmdl.io/1.1.3/material.teal-red.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout">
+	  <div class="mdl-layout__drawer">
+	    <span class="mdl-layout-title">Title</span>
+	    <nav class="mdl-navigation">
+	      <a class="mdl-navigation__link" href="">Link</a>
+	      <a class="mdl-navigation__link" href="">Link</a>
+	      <a class="mdl-navigation__link" href="">Link</a>
+	      <a class="mdl-navigation__link" href="">Link</a>
+	    </nav>
+	  </div>
+	  <div class="pcmr-ribbon"></div>
+	  <main class="pcmr-main mdl-layout__content">
+	  	<div class="page-content">
+	  		<div class="pcmr-container mdl-grid">
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+				<div class="pcmr-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+					<section id="intro">
+						<h1 id="page-title">Why PC?</h1>
+						<p>
+							The first thing people ask when they hear about the "PC Master Race" or begin reading this article is, "Is this a real ideology? Is this an actual group?". The answer is <a href="https://en.wikipedia.org/wiki/PC_Master_Race" rel="nofollow">yes, absolutely</a>. One thing we specialize in as a group is education and facts, and this page is the physical embodiment of just that. So... Why PC? What's the big deal with PC gaming? What's wrong with console gaming? Is PC gaming actually superior? Are consoles really hurting the game industry? Everything will be answered in greater detail, but yes: PC gaming is wholly and objectively superior to console gaming. It can fill absolutely any and every need that consoles can. <strong>Any and all</strong> limitations or restrictions holding the PC back are <em>entirely artificial</em> and fabricated by console manufacturers, console developers, and console journalists (essentially, the "console industry") to prolong their relevance and profit. Long has the PC dealt with slander, misrepresentation, console marketing lies, FUD, and <a href="https://www.reddit.com/r/pcmasterrace/wiki/dictionary#wiki_hostageware" rel="nofollow">hostageware</a> from the console industry. That's partially what triggered the creation of this subreddit and formation of our ideology in the first place! Before the rise of the "PC Master Race" communities and ideology, there wasn't any unified group present to fight console industry slander, FUD, hostageware, and marketing lies. This has now changed. PC gaming is no longer a force to be messed with, and there's an army of 500k+ people who have united for the very purpose of making sure PC gaming is properly represented and no longer mistreated. As users of a free, open, and decentralized platform, it's our responsibility as PC gamers to take the place of the support, management, port testing, and other essential duties that a console manufacturer would otherwise handle for its users and its developers. The page you're about to read is the product of several years of hard work from individuals who believe in the PC, who have done all of this for no other reason than to ensure the console industry's damage is limited, and that the truth still has the ability to directly reach you regardless of how much they attempt to bury the truth in marketing lies and negative associations. Strap yourself in, little Timmy. Get some food, water, and music, because this ride doesn't end.
+						</p>
+						<p>
+							<em>Forget everything you thought you knew about PC gaming</em>. This article has two goals: to <em>teach</em> readers how to get into PC gaming and take advantage of all its current offerings, and to <em>dispel</em> the myths about PC gaming that the console industry has been spinning up in an attempt to remain on top despite declining relevance. It's 2016 and PC gaming has <em>never</em> been this <em>inexpensive</em>, <em>easy to get into</em>, <em>free of restriction</em>, or <em>more widespread</em> than it is today. Largely to thank for this massive PC growth, consoles have never been as ethically and technologically <em>worse</em> than they are today - and a lot of people are switching. Yes, this is the first time in gaming history where PCs have surpassed consoles in every conceivable way <em>for less money</em> (however, consoles continue to sell due to dishonest marketing, abuse of money and power of their creators, and traditional beliefs held by many gamers). This following page will explain (in detail) how and why the PC is the unquestionably and <a href="https://en.wikipedia.org/wiki/Objectivity_%28philosophy%29" rel="nofollow">objectively</a> superior choice (cheaper, faster, better, more versatile, and more compatible) compared to underpowered and industry-harming PS4 and XBox One "PC imitators". It's also <em>non-linear</em> and can be read in any order that you prefer. This <em>is</em> a very PC-oriented community, so you may be expecting unjustified or illogical <a href="https://www.youtube.com/watch?v=Ci4q2BixHFE" rel="nofollow">fanboyism</a>... however, a large driving force behind the PC movement is <em>because</em> of what it offers. In other words, <em>we chose it because it's awesome</em> - not <em>it's awesome because we chose it</em>.
+	    				</p>
+	    				<p>
+	    					The past seven years of surging growth, competition, and innovation in the industry have improved the PC in almost every regard, largely due to the mobile hardware and efficiency revolution, as well as things like <a href="http://store.steampowered.com/" rel="nofollow">Steam</a>, <a href="https://www.humblebundle.com/" rel="nofollow">Humble Bundle</a>, and <a href="http://www.gog.com/" rel="nofollow">Good Old Games</a>. PC gaming is now cheaper than ever, and console gaming continues to get more and more expensive as the PlayStation &amp; XBox divisions continue to push prices (and their own business operation costs) higher every year. Reading this guide will cost you exactly $0, whereas, in comparison, buying a console and paying for all the extended costs of everything it requires could easily exceed $2,000 in just a few years (not to mention, consoles offer a considerably worse gaming experience)! Honestly, what could it really hurt to read this? <strong>Bookmark this, read it thoroughly, check all the sources, share the link with your friends, and enjoy!</strong>
+	    				</p>
+	    				<p id="intro-sources">
+	    					<strong>Various sources:</strong> <a href="http://www.gamesindustry.biz/articles/2014-01-28-pc-gaming-market-to-exceed-usd25-billion-this-year-dfc" rel="nofollow">1</a><a href="http://www.ign.com/articles/2013/11/29/pc-is-far-superior-for-gaming-says-nvidia" rel="nofollow">2</a><a href="http://www.noobfeed.com/blogs/4111/growth-of-pc-platform-could-mean-game-over-for-consoles" rel="nofollow">3</a><a href="http://arstechnica.com/gaming/2014/04/analyst-pc-gaming-now-brings-in-more-money-than-console-gaming/" rel="nofollow">4</a><a href="http://hexus.net/gaming/news/industry/69141-global-pc-games-market-revenue-overtakes-consoles/" rel="nofollow">5</a><a href="https://www.youtube.com/watch?v=wiS9LC6X55Q" rel="nofollow">6</a><a href="http://www.geek.com/games/why-now-is-the-time-to-become-a-pc-gamer-1590093/" rel="nofollow">7</a><a href="http://www.techradar.com/us/news/gaming/consoles/console-gaming-is-dead-everything-good-is-happening-on-pc-right-now-1260162" rel="nofollow">8</a><a href="http://www.pcgamer.com/there-are-711-million-pc-gamers-in-the-world-today-says-intel/" rel="nofollow">9</a><a href="http://www.gamespot.com/articles/steam-reaches-100-million-users-and-3-700-games/1100-6422489/" rel="nofollow">10</a><a href="http://www.gamespot.com/articles/if-you-haven-t-tried-pc-gaming-then-it-s-about-time-you-did/1100-6420883/" rel="nofollow">11</a><a href="http://arstechnica.com/gaming/2014/04/pc-gaming-not-just-still-alive-but-still-dominant-says-pax-east-panel/" rel="nofollow">12</a><a href="http://www.forbes.com/sites/jasonevangelho/2014/04/28/as-global-pc-game-revenue-surpasses-consoles-how-long-should-console-makers-keep-fighting/" rel="nofollow">13</a><a href="https://www.youtube.com/watch?v=0KUpRXRGVHU" rel="nofollow">14</a><a href="http://i.imgur.com/9dLPrSy.png" rel="nofollow" name="img86">15</a><a href="http://i.imgur.com/gJc3toa.jpg" rel="nofollow" name="img87">16</a><a href="http://www.japantoday.com/category/arts-culture/view/fans-mourn-segas-exit-from-the-console-video-game-market" rel="nofollow">17</a><a href="http://www.pcworld.com/article/2893767/pc-gamers-wont-pay-to-play-xbox-live-games-online-and-console-owners-are-furious.html" rel="nofollow">18</a><a href="http://news.softpedia.com/news/The-Witcher-3-Gets-Precious-Cargo-60fps-Video-That-Promotes-Xbox-One-479111.shtml" rel="nofollow">19</a><a href="http://in.ign.com/india/74953/editorial/ign-india-opinion-why-eighth-gen-consoles-are-hold" rel="nofollow">20</a><a href="http://attackofthefanboy.com/news/xboxs-phil-spencer-says-dont-define-games-resolution-framerate/" rel="nofollow">21</a><a href="https://www.youtube.com/watch?v=ivHj39ifvsA&amp;feature=youtu.be&amp;t=69" rel="nofollow">22</a><a href="http://i.imgur.com/68JVuNv.jpg" rel="nofollow" name="img94">23</a><a href="http://www.techspot.com/news/39738-microsoft-killed-cross-platform-project-because-pc-gamers-wrecked-console-gamers.html" rel="nofollow">24</a><a href="http://techraptor.net/content/pcmasterrace-explained" rel="nofollow">25</a><a href="http://www.pcgamer.com/xcom-2-creative-director-pc-gaming-is-in-a-golden-age/" rel="nofollow">26</a><a href="http://www.cnet.com/au/news/digital-australia-16-igea-pc-gaming-broadband-bottleneck/" rel="nofollow">27</a><a href="http://www.cnet.com/news/playing-games-on-the-pc-is-making-a-comeback/" rel="nofollow">28</a><a href="http://kotaku.com/5792913/consoles-your-sucky-insides-are-holding-pc-games-back" rel="nofollow">29</a><a href="https://www.youtube.com/watch?v=iipDWbd6HNg&amp;feature=youtu.be&amp;t=52" rel="nofollow"  >30</a><a href="http://www.businessinsider.com/games-that-look-better-on-pc-2015-12" rel="nofollow">31</a><a href="http://www.pcworld.com/article/3013014/software/no-pcs-dont-have-fewer-exclusive-games-than-consoles.html" rel="nofollow">32</a><a href="http://www.gamasutra.com/view/news/216281/Analyst_Globally_PC_game_revenue_now_exceeds_console_game_revenue.php" rel="nofollow">33</a><a href="http://jonpeddie.com/press-releases/details/pc-gaming-market-holds-lead-over-consoles" rel="nofollow">34</a><a href="https://www.youtube.com/watch?v=_B-TrzaIcZQ" rel="nofollow">35</a>
+						</p>
+					</section>
+					<section id="modern-consoles-are-the-enemy">
+						<h3>Console gamers are not the common enemy. Modern consoles are.</h3>
+						<p>
+							I feel it's important to include this information in the article as soon as possible, since a lot of people get the wrong impression going in and don't take information to heart until they realize they're being educated rather than scolded... I should also point out that it's well-known that past consoles outperformed PCs, but that was the past. This is now. Things are different. The openness of the PC was bound to be taken advantage of eventually, and what triggered it is the stagnation of the console market. And, now that the console market has stagnated and the PC is a viable alternative, it's very possible that traditional consoles with total control under a single corporation is entirely going to vanish.
+						</p>
+						<p>
+							Sony and Microsoft give you an inferior system, charge you a lot of extra money for it, and make you hold on to the pieces of junk for 8 years before they give you the option of (measly) upgrades. By selling you these systems, they lock you into their overpriced ecosystem, helping them further the cycle with their ill-acquired money. They don't let you play with friends unless you pay. They don't let you play with friends that bought the other systems at all. They don't let developers directly sell you the game - they charge for dev kits and include royalties, which massively decreases their profits over that of the PC version. When you take into account the business strategy of these companies, you'll find that it's all just one big greedy systematic ripoff of uneducated consumers. <a href="http://www.youtube.com/watch?v=RUAeYL7eAdI&amp;feature=player_detailpage#t=264" rel="nofollow">They're holding <em>your</em> favorite games hostage</a> on their closed platforms because they <em>know</em> you'll buy into it. If everyone went with a PC and disregarded this disgusting behavior, these developers wouldn't be so easily convinced to support these "next-gen" consoles. So, do yourself and the industry a favor and go with a PC. PC exists because it's an excellent platform and for no other reason than that. Nobody's advertising it. Nobody's cutting deals with Frito Lay to get it stamped on Dorito bags. Nobody's running a 'PC booth' at gaming festivals. PC exists and thrives simply because it is freaking glorious. XBox and PlayStation consoles exist because their parent corporations hijack developers (and games) that people love and cancel ports to competing platforms (other consoles as well as PC), and force fans of these games to pay a 'hardware ransom' to play it. The PC is open, cheap, customizable, and powerful. Your best interests are always at hand, no matter how arrogant some PC gamers may seem when they speak negatively of the "anti-gamer" consoles. For anyone that's offended, I am truly sorry... but if you're going to get offended over this guide then you probably had no intention of giving PC a chance in the first place. Just remember: <strong>PC gaming is superior to console gaming, but the gamers themselves are neither superior or inferior to one another: they're just people with varying degrees of understanding.</strong> Fight the misinformation, fight the false advertising, and fight the anti-gaming console monopoly. Long live freedom, long live affordable and beautiful gaming, and long live the Glorious PC Gaming Master Race!
+    					</p>
+					</section>
+					<section id="pc-summary">
+						<h3>In summary, why should I choose a PC over a console? What can it possibly offer?</h3>
+						<p>
+							PCs are awesome machines for gaming, work, and entertainment alike for many reasons. This includes, but is not limited to, the following reasons listed below. The sources that follow each bullet point <em>should</em> link to sections within this page, which in turn contain all the sources you'll probably want to see.
+						</p>
+						<ul>
+						    <li>
+						    	PC gaming as a whole is much cheaper than console gaming. Especially in the long run, it can be less than half of what a console will cost you. Hidden fees, price hikes, and royalties are abundant for gamers AND developers in the console industry. <sup><a href="https://www.reddit.com/r/pcmasterrace/wiki/guide#wiki_.22isn.27t_pc_gaming_more_expensive_than_console_gaming.3F.22" rel="nofollow">[1]</a></sup> <sup><a href="https://www.reddit.com/r/pcmasterrace/wiki/guide#wiki_pc_games_are_so_much_cheaper_that_they_alone_can_allow_even_a_high-end_pc_to_undercut_a_console_within_a_single_year" rel="nofollow">[2]</a></sup>
+						    </li>
+						    <li>
+						    	PC hardware offers better bang-for-buck &amp; value than console hardware (same performance for less money, more performance for the same money, or much more performance for a bit more money). <sup><a href="http://www.gamespot.com/articles/149-nvidia-gtx-750-ti-unveiled-plays-titanfall-better-than-xbox-one/1100-6417813/" rel="nofollow">[1]</a></sup>
+						    </li>
+						    <li>
+						    	PCs have the freedom to upgrade whenever YOU decide to, not when Sony or Microsoft decide to. If you just got a big paycheck and wanted to sell your R7 260 to a friend for $50 and buy an R9 380 for $150 <em>tomorrow</em>, you could do it.
+						    </li>
+						    <li>
+						    	PCs give you full internal and external control over the <a href="http://www.reddit.com/r/pcmasterrace/comments/371ce9/psa_the_graphical_fidelity_triangle/" rel="nofollow">graphical fidelity triangle</a>. Consoles can control neither.
+						    </li>
+						    <li>
+						    	PCs easily work with TVs and monitors, and even multiple of each.
+						    </li>
+						    <li>
+						    	PCs can play nearly every old PC and <em>console</em> game ever made, thanks to its tremendous legacy support, emulator availability, and <a href="http://gog.com/" rel="nofollow">GOG</a>.
+						    </li>
+						    <li>
+						    	PCs can use nearly every console controller ever made, modern ones (PS3/PS4/X360/XO) work without even needing a USB adapter. <sup><a href="http://i.imgur.com/4KJ22cI.jpg" rel="nofollow">[1]</a></sup>
+						    </li>
+						    <li>
+						    	PC games offer a clearer image thanks to <a href="https://en.wikipedia.org/wiki/Native_resolution" rel="nofollow">native resolution</a> and its ability to adjust to any display its plugged into. Console games don't allow resolution adjustments, and will lock to whatever the developer arbitrarily chose. This means that lower resolution displays offer no performance benefit like they do on PCs, because the resolution is never lowered to spare some workload on the GPU (which, on a PC, would mean it could render frames faster). <a href="http://www.eurogamer.net/articles/2014-05-13-confirmed-watch-dogs-ps4-900p-xbox-one-792p-both-30fps" rel="nofollow">[1]</a>
+						    </li>
+						    <li>
+						    	Gaming services and "social services" on the PC are completely free, even with online play. (Steam, Galaxy, Desura, Mumble, etc)
+						    </li>
+						    <li>
+						    	Gaming services on the PC offer more functionality than what you pay for on a console.
+						    </li>
+						    <li>
+						    	PCs have better better multiplayer support. (LAN, 16x local multiplayer on the same machine with softXpand)
+						    </li>
+						    <li>
+						    	Using a modern budget GPU yields around 60 frames per second during gameplay with recent game releases. Consoles can barely reach 30FPS most of the time.
+						    </li>
+						    <li>
+						    	Not only can PC's be used for education, entertainment, gaming, and content creation... they're the best at all of these things.
+						    </li>
+						    <li>
+						    	PCs are much more powerful than the PS4 or XBox One <a href="http://www.reddit.com/r/pcmasterrace/wiki/builds#wiki_the_next-gen_crusher" rel="nofollow">at the same (traditionally believe to be affordable!) price point</a>.
+						    </li>
+						    <li>
+						    	More exclusives than all the current-gen consoles combined.
+						    </li>
+						    <li>
+						    	More highly-rated exclusives.
+						    </li>
+						    <li>
+						    	PC games have free modifications and enhancements available. Old games and new games alike have player-made content, graphical enhancements, and additions available for free. Even Minecraft. <sup><a href="http://i.imgur.com/GdToiFe.jpg" rel="nofollow">[1]</a></sup></li>
+						    <li>
+						    	<a href="https://en.wikipedia.org/wiki/List_of_PC_titles" rel="nofollow">More games, much larger library</a>.
+						    </li>
+						    <li>
+						    	<a href="https://en.wikipedia.org/wiki/List_of_PC_exclusive_titles" rel="nofollow">More exclusive games</a>.
+						    </li>
+						    <li>
+						    	Healthy independent developer scene.
+						    </li>
+						    <li>
+						    	<a href="https://en.wikipedia.org/wiki/List_of_free_PC_titles" rel="nofollow">Lots of free games</a>.
+						    </li>
+						    <li>
+						    	Free <a href="http://www.abandonia.com/" rel="nofollow">abandonware</a> titles.
+						    </li>
+						    <li>
+						    	PCs can emulate almost any handheld <em>and</em> stationary console games using freely available emulators. Sometimes even at higher framerates, detail levels, and with better input than the original console permitted! <sup><a href="https://en.wikipedia.org/wiki/List_of_video_game_emulators" rel="nofollow"  >[1]</a></sup> <sup><a href="https://www.youtube.com/watch?v=CQC2WI55n60" rel="nofollow">[1]</a></sup> <sup><a href="https://archive.org/details/1964-60FPS-Edition" rel="nofollow">[2]</a></sup>
+						    </li>
+						    <li>
+						    	Increasingly cheaper hardware for the price as new GPUs are released.
+						    </li>
+						    <li>
+						    	Big Picture mode for couch gaming.
+						    </li>
+						    <li>
+						    	Easier to repair and highly modular.
+						    </li>
+						    <li>
+						    	Backward and forward <em>hardware</em> compatibility of ~2 years.
+						    </li>
+						    <li>
+						    	No punishments for repairing.
+						    </li>
+						    <li>
+						    	Can be upgraded if desired.
+						    </li>
+						    <li>
+						    	Easier to upgrade.
+						    </li>
+						    <li>
+						    	Better price-performance than consoles.
+						    </li>
+						    <li>
+						    	Higher framerates. (<a href="http://puu.sh/aU2pn/ba83554d63.webm" rel="nofollow">smoother</a>)
+						    </li>
+						    <li>
+						    	Higher resolutions than consoles (such as 1080p, 1440p, 1600p, 4k, and 8k!) if your display supports it and you have GPU power you're willing to spare. Consoles struggle, <a href="http://www.ign.com/wikis/xbox-one/PS4_vs._Xbox_One_Native_Resolutions_and_Framerates" rel="nofollow">even at 720-900p</a>!
+						    </li>
+						    <li>
+						    	Higher graphical details. (lighting, textures, foliage, particles, shading, weather)
+						    </li>
+						    <li>
+						    	You're probably going to own some sort of PC anyways, why not pay a bit more on top to make it a gaming machine? That alone makes it cheaper than a console.
+						    </li>
+						</ul>
+						<p>
+							The Personal Computer is a <em>constantly</em> evolving platform. It grows in power, capability, and value every single year. It's also free of the control of any single entity, which are why many of these advantages now exist. Rather than being regulated by a single company, control and improvement influence over the PC belongs to everyone equally. Even you, the consumers, have the full freedom to create or sell software, games, and hardware for it. It's being constantly improved by competing companies and individuals all over the spectrum, and all of them are trying to offer you (and potential developers) the best experience possible. Just keep reading!
+						</p>
+					</section>
+					<section id="why-do-you-care">
+						<h3>"Why do you care what others buy and play games on?"</h3>
+						<p>
+							That's a great question. We (the PC gamers) love gaming and the game industry with a burning passion. Unfortunately for the industry, modern consoles are sucking it dry. No, that's not to say <em>every</em> console manufacturer is responsible for this, and it's also not to say the ones that <em>are</em> responsible are doing it <em>all the time</em>, but it's still harmful. Consoles are directly harming developers, gamers, and the PC platform with their petty exclusivity and dishonest marketing wars.
+						</p>
+						<p>
+							Nowadays, the console business is no longer about satisfying gamers and developers; it's about building a monopoly so they can forcefully attract and <a href="https://www.youtube.com/watch?v=bR8CVLVmKQs#t=286" rel="nofollow">monetarily drain developers to the point where they can't afford to develop a quality game on a competing platform (Sony has been known to starve developers to the point where they may opt to skip competing game platforms)</a> (hence, bad ports). It's about bribing them if they can't attract them through marketshare (<a href="https://en.wikipedia.org/wiki/Paid_exclusivity" rel="nofollow">paid exclusivity</a>). It's about doing whatever it takes to lock up as many franchises as possible to your own platform so the competition has none left, which leaves you with more market share (and consequently, power). They've focused so much on killing competing platforms that they have no money left to make the consumers a product that makes them happy. You, as a gamer, should be pissed at what they're doing to you and your favorite games. If you understand this and continue to defend what they're doing simply because of brand loyalty, you really need to reconsider your reasoning. Consoles take away WAY more than they give, and that's all the justification anyone should ever need when they try showing someone better alternatives.
+						</p>
+						<p>
+							<strong>Consoles hurt</strong>: PC gamers, console gamers, and game creators.
+						</p>
+						<p>
+							<strong>Consoles help</strong>: The manufacturers that created and fiercely market them, developers that were purchased by a console manufacturer, and "journalists" that side with them. That's it.
+						</p>
+						<p>
+							In comparison: <strong>The PC helps</strong> all of the following:
+						</p>
+						<ul>
+						    <li>Hardware manufacturers. (Asus, AMD, Gigabyte, XFX, EVGA, Intel, Seagate, etc)</li>
+						    <li>Software companies. (Unity Technologies, Adobe, Mozilla, CD Projekt Red, Google, Dropbox)</li>
+						    <li>Game creators. (Blizzard, Gearbox Software, Crytek, Valve, CD Projekt Red, id Software, Rockstar, Devolver Digital)</li>
+						    <li>PC gamers.</li>
+						    <li>Console gamers. (by giving console manufacturers a standard to aspire for, unfortunately they just use marketing to justify shooting for the bottom of the bin)</li>
+						</ul>
+						<p>
+							and finally, <strong>PC hurts</strong> all of the following:
+						</p>
+						<ul>
+						    <li>Profit margins of console manufacturers.</li>
+						    <li>Developers that signed away their rights or entire existence over to console manufacturers.</li>
+						    <li>"Journalists" that rely on pro-console and anti-PC FUD to pay their bills. <a href="http://www.bizjournals.com/seattle/blog/techflash/2010/06/microsofts_e3_xbox_bribery_makes_journalism_ethicists_squirm.html" rel="nofollow"><sup>[1]</sup></a></li>
+						</ul>
+					</section>
+				</div>
+	        </div>
+	  	</div>
+        <footer class="pcmr-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy and Terms</a></li>
+              <li><a href="#">User Agreement</a></li>
             </ul>
-        </nav>
-        <div class="container-fluid" id="cover">
-            <div style="text-align: center;">
-                <h1><span style="font-size: 6em;" id="coverheader">Why PC?</span><br><br>
-                <small>The no-nonsense, end all guide to why console gaming is no longer worth your time</small></h1><br>
-                <a href="#goodconsoles"><span class="glyphicon glyphicon-circle-arrow-down animated pulse" style="font-size: 4em; color: #E8AE1F;"></span></a>
-            </div>
-        </div>
-        <main data-spy="scroll" data-target="#listentries">
-            <div class="container-fluid" id="goodconsoles">
-                <span class="text-center">
-                    <h1><span class="anchorme">The Golden Age of Consoles</span><br>
-                    <small>Back when quality mattered</small></h1>
-                </span>
-                <p class="lead indented">
-                    Once upon a time, console manufacturers cared about the consumer and made great consoles. They vastly outperformed PCs of the era, and had a great selection of games.
-                </p>
-                <p class="indented">
-                    This guide isn't trying to hide the truth. Back before the 90's, consoles like the SNES, N64, and the rest of the "golden age" consoles all the way down to the original XBox and PS2, blew PCs out of the water. During that time, PCs were barely more than word processors, and cost the average consumer way more than a gaming console. Not to mention that back then, consoles were constantly innovating in attempts to outperform each other and provide the best possible system to gamers everywhere. Gaming as it is now started with the consoles of the early 80s. But, then came 1985. The Apple II and Commodore 64 skyrocketed PC popularity, and ever since then, PCs have been gaining in power, game library, and innovation. And since the stagnation of the XBox 360 and PS3 era, consoles have been becoming less and less of a good investment, while PCs have just been getting better.
-                </p>
-            </div>
-            <div class="container-fluid" id="badconsoles">
-                <span class="text-center">
-                    <h1><span class="anchorme">The State of Consoles Today</span><br>
-                    <small>Not so good</small></h1>
-                </span>
-                <p class="lead indented">
-                    With all the benefits of modern PCs, the only things that consoles have going for them are market share, high profitability for the companies building them, <a href="http://www.gamesindustry.biz/articles/2014-05-29-the-astronauts-in-2014-USD60-for-a-game-is-a-little-insane">expensive games</a>, and exclusives. The third being hardly anything to brag about as a console user.
-                </p>
-                <p class="indented">
-                    Nowadays, consoles aren't geared towards console users anymore, they're geared towards the companies making them. They're made to be as cheap to manufacture and as easy to make a profit as possible. And although the XBox 360 and PS3 used new hardware that wasn't used throughout the game industry, which caused their later games to be better due to better optimization, they were really just gimped PCs. PCs have always been able to use internet, without paying an extra fee for their device. And the services like Netflix and Hulu, that consoles got to use in the last few years before the XBox One and PS4, were on PC first. The only thing that consoles have are exclusives like Halo, Gears of War, and Uncharted. But those games, and other exclusives, aren't exclusive because that's the only system capable of running it, but rather <a href="http://www.gamesradar.com/paying-exclusivity-why-its-here-stay/">because Microsoft and Sony use their ill-earned profits to influence starving developers</a>. With Microsoft and Sony dominating the console industry, (Sorry Nintendo!) their monopolies just make it worse for everyone involved.
-                </p>
-            </div>
-            <div class="container-fluid" id="benefits">
-                <section class="pcfact anchored" id="sect1">
-                    <span class="text-center">
-                        <h1><span class="anchorme">What PC's have to Offer</span><br>
-                        <small>It's a lot more than you'd think</small></h1>
-                    </span>
-                    <p class="lead indented">
-                        Before we continue, <strong>forget everything you thought you knew about PC gaming.</strong> The past five years of surging growth, competition, and innovation in the industry have improved the PC in almost every regard, largely due to the mobile revolution and things like <a href="http://store.steampowered.com/">Steam</a>, <a href="https://www.humblebundle.com/">Humble Bundle</a>, and <a href="http://www.gog.com/">Good Old Games</a>.
-                    </p>
-                    <p class="indented">
-                        Unlike consoles, PC's can be used for much more than gaming, and are all around awesome pieces of equipment for a ton of reasons, including, but not limited to:
-                        <ul>
-                            <li>Works with any TV or monitor</li>
-                            <li>Works with <a href="http://www.reddit.com/r/pcmasterrace/wiki/controllerguide">any controller</a></li>
-                            <li>Better local multiplayer</li>
-                            <li>Using a modern GPU yields <a href="http://30vs60.com/">60+ FPS during gameplay</a></li>
-                            <li>Usable for work, education, and of course entertainment</li>
-                            <li>More powerful than a PS4 or XBox One, even for <a href="http://www.reddit.com/r/pcmasterrace/wiki/builds#wiki_the_next-gen_crusher">$400</a></li>
-                            <li>Cheaper Games (<a href="http://store.steampowered.com/">Steam</a>, <a href="http://www.gog.com/">GOG</a>, <a href="https://www.humblebundle.com/">Humble Bundle</a>, <a href="http://www.bundlestars.com/">Bundle Stars</a>)</li>
-                            <li>Better average game ratings (from <a href="http://www.metacritic.com/browse/games/score/metascore/all/pc?sort=desc">Metascore</a>)</li>
-                            <li>More Exclusives</li>
-                            <li>Healthy independent developer scene</li>
-                            <li>Tons of <a href="http://thepiratebay.se/torrent/9849549/THE_PIRATE_BAY_BUNDLE">free</a> and <a href="http://www.gamesradar.com/best-free-games-play-right-now/">free-to-play</a> games</li>
-                            <li>Free <a href="http://www.abandonia.com/">abandonware</a> titles</li>
-                            <li>10X larger game library</li>
-                            <li>Emulate older consoles for free</li>
-                            <li>Cheaper hardware</li>
-                            <li>Steam Big Picture Mode for couch gaming</li>
-                            <li>Easy to repair by yourself without penalty</li>
-                            <li>Possible and easy to upgrade</li>
-                            <li>Better price:performance ratio than consoles</li>
-                            <li>Higher and smoother framerates</li>
-                            <li>Higher resolution, from at least native monitor resolution to 4k</li>
-                            <li>More grahpical details for immersion</li>
-                        </ul>
-                    </p>
-                    <p class="indented">
-                        PCs are always evolving, growing in power, capability, and value every single year. No single entity owns the PC, which allows for all these options for PC users to buy, build, and upgrade with. And directly because of this freedom from a single corporation, everyone making anything for PC, (even the people who made this website), strive to bring the best product to you, the consumer. But, I'm guessing that right now you're a staunch console gamer who loves his/her system. While that's not necessarily bad, let's get the facts straight on PC gaming.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect2">
-                    <p class="lead heading anchorme">
-                        <strong>Isn't PC gaming more expensive than console gaming?</strong>
-                    </p>
-                    <p class="indented">
-                        Not even close, <em>especially</em> if you're trying to target console performance. There are <a href="http://www.gamespot.com/articles/149-nvidia-gtx-750-ti-unveiled-plays-titanfall-better-than-xbox-one/1100-6417813/">graphics cards on the market that go for approximately $150 that surpass PS4 and XBox One performance</a>, and full computers can be built for around $500. Lots of people think that to get a PC that can play games, they need to spend more than $750-$1000, which just <strong>simply isn't true</strong>. These inaccuracies are largely due to highly vocal and misinformed masses, and the advertisement of higher end hardware. (Which makes sense when you think about it, companies <em>want</em> to sell their most expensive products) <a href="https://www.youtube.com/watch?v=RTGMG2qUMjU">We're not living in the 90's anymore</a>. In reality, PC hardware is the cheapest it's ever been, and anyone, even a complete beginner to PC parts and building, can put together a PC that blows "next-gen" (Or is current gen now?) consoles, which are really just weak PC's with a crippled OS. And if all you want to do is match their 720p resolution and 30 FPS, you can do it for the same price as those consoles, but with all the extra things a computer can do. In fact, <a href="http://www.gamespot.com/articles/149-nvidia-gtx-750-ti-unveiled-plays-titanfall-better-than-xbox-one/1100-6417813/">it's actually hard to find a minimum-range graphics card that can even perform as bad as console graphics these days</a>. The next time someone reminds you that "It's not all about graphics", remind that that they're in luck, because they'll be spending almost nothing on their graphics card to get the performance they deem adequate.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect3">
-                    <p class="lead heading anchorme">
-                        <strong>In addition to increased value, PCs also have a higher performance and quality ceiling</strong>
-                    </p>
-                    <p class="indented">
-                        You can build a PC on a budget and beat consoles, performance wise. But if you have the money and the desire, you can literally spend thousands, hell millions if you really wanted to, on a computer that would make everyone on Facebook cry in the face of its glory. From quad-graphics cards in SLI/XFire to multi monitor setups, you can build a battlestation worthy of the name. And game developers know that there are people out there with those interests, and with them in mind, they make options in games to make E3 demos look like they're from the 90's. (Ok not really, but you get my point) The misconception here is that some people believe that just because these options exist, they are the only way to play the game, and that they need to buy the latest and greatest "RadForce MegaGigaJiggaFlexx 95-billion Elite Zombie Slayer Edition" to play the game on acceptable settings. Developers know that the average person is not Bill Gates, and so they make sure that their game is playable on a variety of systems, from the low end laptops to the previously mentioned high end beasts. The fact of the matter is, game and software developers know exactly what the average PC specs are, and the things they want most are sales. If they made programs so demanding only $3K+ computers could run, they'd make a tiny fraction of what they wanted. It's almost exclusively the <a href="http://imgur.com/a/KRywv">graphics mods</a> made by people with too much time on their hands (Which in this case is a great thing) that push a game's GPU requirement to $dollar;1,000 or more.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect4">
-                    <p class="lead heading anchorme">
-                        <strong>You don't have to build a PC to fully experience PC gaming</strong>
-                    </p>
-                    <p class="indented">
-                        Before you run off and buy a computer, know this: <strong>don't buy a "gaming" desktop/laptop</strong>. (The only time you should is if you are in a position where building a computer/using a desktop is not possible) It's either going to be tremendously overpriced (I'm looking at you, Alienware), or severely underpowered for the price (CyberPowerPC, iBuyPower, and don't even get me started on Apple). Usually, they toss in a good processor such as one from the i7, which is <a href="http://www.youtube.com/watch?v=I8e0jnm39lE">completely overkill</a> for an average gaming build, and toss in a crappy $50 graphics card (the most important part in a gaming computer), causing your games to run like crap. You can put new PC hardware in almost any full-size desktop. What I'm saying is, instead of spending $3200 on that Alienware Aurora (yes they get that high, I almost made the mistake of buying one), you can go buy a $400-$500 desktop from Best Buy and slap in a ~$100 graphis card and play modern games very well. Doing just that is no harder than swapping the hard drive in a console, as was the recent trend, and after a moderate (depending on your internet speed) download and install of the card's drivers, you're good to go. <a href="https://www.youtube.com/watch?v=A_Pnte_niJE">PCPerspective even has their own in-depth video</a> demonstrating and explaining how cheap and easy it is to turn an 'office box' into a gaming machine. However, building is still the best choice, as it will last much longer, and offer better customizability and value.
-                    </p>        
-                </section>
-                <section class="pcfact anchored" id="sect5">
-                    <p class="lead heading anchorme">
-                        <strong>Building a PC isn't rocket science</strong>
-                    </p>
-                    <p class="indented">
-                        You don't need extensive training, and neither do you need a degree in computerology. All you need to do is watch some video tutorials, or ask someone online (<a href="http://www.reddit.com/r/BuildAPC">/r/BuildAPC</a>, <a href="http://www.reddit.com/r/BuildAPCForMe">/r/BuildAPCForMe</a>), and you'll know all you'll need to build your first PC. (Check out some builds by clicking the icon in the top left!) Just take care of any static discharge and be ready to delicately handle the parts, and the project can be done in an afternoon.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect6">
-                    <p class="lead heading anchorme">
-                        <strong>Mac OSX and Linux can be used on pretty much any laptop or desktop PC</strong>
-                    </p>
-                    <p class="indented">
-                        A PC made to run OSX is often called a "Hackintosh," and since 2005, people have been making them. Although building does take more effort than clicking the add to cart and buy buttons on Apple's website, and hackintoshes generally take a some work to get running than a standard PC, the money you'd save by building one more than makes up for the time. Check out a great resource for building your own at <a href="http://www.reddit.com/r/Hackintosh">/r/Hackintosh</a>.
-                    </p>
-                    <p class="indented">
-                        And if Mac isn't your thing, Linux can be used in all its beautiful glory. Among the popular distros are Ubuntu, CrunchBand, Debian, <a href="http://elementaryos.org/">ElementaryOS</a>, and many more.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect7">
-                    <p class="lead heading anchorme">
-                        <strong>PC games are so much cheaper that they alone can make a PC undercut a console within a year</strong>
-                    </p>
-                    <p class="indented">
-                        All year round you can find <a href="http://www.reddit.com/r/GameDeals/search?q=url%3Asteampowered.&restrict_sr=on&sort=new">extreme discounts</a> on all sorts of games. And when I say extreme, I don't mean the 20% Gamestop gives you when you buy 5 other games. I'm talking about <a href="http://gaben.tv/">50%, 75%, 90%, even the rare 100% off</a>. With Steam's <em>massive</em> seasonal sales, the great deals at Good Old Games, and the ludiscrously awesome Humble Bundles, you can get libraries of 200+ games in a couple months for less than the price of a console. Even <em>unrealeased games</em> can sometimes get sales, the highest I've seen being 20% off, a year away from release. People save tons of money, some <a href="http://i.imgur.com/9wvvcag.png">over $3000 over 3-4 years</a>, and even with the crazy low prices, <a href="http://www.youtube.com/watch?v=RCsgzRxIsmY">developers still make more money from PC</a>. (Used game sales' profits all go to the seller. None makes its way to the developer, and the practice really hurts the gaming industry. Way more than pirating.)
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect8">
-                    <p class="lead heading anchorme">
-                        <strong>The Virtual Reality revolution is being led by the PC</strong>
-                    </p>
-                    <p class="indented">
-                        If you wanted virtual reality gaming (and many other forms of entertainment) in its most immersive form, you'll need a PC. High resolution and framerates are <em>absolutely essential</em> for headsets like the Oculus Rift to properly immerse you. The industry's leading VR company said so themselves: <a href="http://www.techradar.com/news/gaming/oculus-rift-creator-xbox-one-and-ps4-are-far-too-limited-for-what-we-re-planning-1198420">even the next-gen consoles are far too weak to handle they plan on doing</a>. Some people don't want VR, and you may be one them. But simply because you don't want and/or need VR doesn't mean you shouldn't get a PC, it just means that you can save more on your build!
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect9">
-                    <p class="lead heading anchorme">
-                        <strong>The ESports revolution is being led by the PC</strong>
-                    </p>
-                    <p class="indented">
-                        This has caused somewhat of an unexpected explosion in PC popularity in recent years, and consoles don't even come close to competing with PCs here, as <a href="https://www.youtube.com/watch?v=w9Fctn2Pgik">this video</a> demonstrates.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect10">
-                    <p class="lead heading anchorme">
-                        <strong>I was told that PC has compatibility problems</strong>
-                    </p>
-                    <p class="indented">
-                        Game developers adhere to popular standards when they make their games. Hardware developers adhere to popular standards when they make hardware. Not doing so would gain them a terrible reputation and most likely bankruptcy. Because of this, games on PC don't have the compatibility issues they used to in the DOS days. In the DOS days, there were no standards to adhere to, and there were thousands of different possible hardware configurations. Almost no games worked with every piece of sound, video, and input hardware. The next time you hear someone complain about PC gaming being a pain because they hate 'checking to see if they have enough video RAM' or 'making sure they have a fast enough processor' or 'whether or not their sound drivers are up-to-date', just punch them and link them here. PC game developers make their game compatible with an enormous possible performance spectrum!
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect11">
-                    <p class="lead heading anchorme">
-                        <strong>PCs are much better suited to sharing your gaming experience</strong>
-                    </p>
-                    <p>
-                        For starters, you don't need to buy a $200 capture card to record your game, just a $30 program and you can start getting your clips. Not to mention the many other options such as live streaming, video editing (which even for console clips would require a PC to edit them), voice chat programs like Mumble and Teamspeak, video chat like Skype and Google Hangouts, game invites, everything that consoles have to offer, PCs do better. Most clip editors out there for consoles use programs like After Effects and Sony Vegas anyways, so why not cut out the extra hardware and just use a PC, record, and edit all in the same place. Not to mention, <a href="http://i.imgur.com/uqCNrZY.jpg">most of the demos and trailers that are shown with the "actual gameplay footage" caption are recorded on PCs</a> to make the console version look better than it really is.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect12">
-                    <p class="lead heading anchorme">
-                        <strong>A PC is more family friendly than a console</strong>
-                    </p>
-                    <p class="indented">
-                        Contrary to what commercials might tell you, a PC is much better suited for those wanting a device to entertain all age groups. With options such as multipl displays, <a href="http://www.reddit.com/r/pcmasterrace/wiki/guide#wiki_fact.3A_you_can_turn_one_pc_into_many_and_multiply_its_value">terminalized with softXpand</a>, access any streaming service, used for school work, games, from the couch, at a desk, used <em>remotely</em>, for communication, and <a href="http://www.reddit.com/r/pcmasterrace/wiki/guide#wiki_fact.3A_pc_is_the_king_of_legacy_game_and_software_support">even emulate console titles using any controller you prefer</a>. You name it, someone out there has made an application to do it. In addition to that, PCs have very in-depth parental/owner controls, that really aren't that hard to use, and are way more secure than the simple solutions that consoles offer.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect13">
-                    <p class="lead heading anchorme">
-                        <strong>A PC is better than a console for media consumption</strong>
-                    </p>
-                    <p class="indented">
-                        The only reason Microsoft and Sony are avertising media consumption (Netflix, Hulu, cable TV, etc) more than games this time is because of how far behind PCs they were. These new consoles make better playback devices than gaming machines. They try to claim that their consoles have access to everything, but really, they don't. <em>Half of all media streaming services on the internet</em> use HTML5 or Flash. Even <em>attempting</em> to access them with the crippled web browsers bundled with consoles requires a subscription first, on top of your internet bill. On PC, there's no extra fees, not to mention the option of using a modern browser. (Sorry Microsoft, but Internet Explorer just doesn't cut it)
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect14">
-                    <p class="lead heading anchorme">
-                        <strong>The PC is far more socially capable than a console</strong>
-                    </p>
-                    <p class="indented">
-                        More players per server (look up Planetside 2), more "LAN party-optimized" games like GMod, more game modes, and perfect compatbility between different generations and forms of PC. See the <a href="http://www.reddit.com/r/pcmasterrace/wiki/languide">/r/PCMasterRace Guide to LAN Parties for more information</a>.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect15">
-                    <p class="lead heading anchorme">
-                        <strong>PC games support local multiplayer gaming</strong>
-                    </p>
-                    <p class="indented">
-                        Although consoles have traditionally been the platform to offer the best local multiplayer support, that's changing. With the surge in PC power in recent years, there have been <a href="http://pcgamingwiki.com/wiki/List_of_Local_Multiplayer_Games">games</a> released that fully support both split-screen and "hotseat" multiplayer (nearly all of which also support <a href="http://www.reddit.com/r/pcmasterrace/wiki/controllerguide">controller input</a>). Some even support up to 6 simultaneous players. Of course, even games without local multiplayer support can still be played on the same PC... <a href="http://www.reddit.com/r/pcmasterrace/wiki/guide#wiki_fact.3A_you_can_turn_one_pc_into_many_and_multiply_its_value">up to 16, in fact</a>. As well as SoftXpand, there's <a href="http://forums.gearboxsoftware.com/showthread.php?t=156994">this</a>, which allows screens to be "split" to a second display! Borderlands 2 is one such game that supports local multiplayer... even from the same Steam account.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect16">
-                    <p class="lead heading anchorme">
-                        <strong>You get more online functionality for free than a paid console user</strong>
-                    </p>
-                    <p class="indented">
-                        Steam is a very heavily integrated gaming suite. For example: you can trade coupons, games, items, and cards with another Steam user right from within Steam (no need to be in-game and meet them). You can see what games and servers your friends are currently playing and join the server with the click of a button (and vice versa, you can invite them to yours). You can trade on the <a href="http://steamcommunity.com/market/">Community Market</a> without ever having to hunt someone down that has or wants certain goods. Steam also has an integrated software store, developer store, Workshop (for easier modding), Greenlight, and Big Picture mode for couch gamers. Steam will also automatically sync your saved games and settings to the Steam Cloud. Your in-game Steam panel is pretty awesome, too. It lets you chat, trade, browse the web for walkthroughs and whatnot, track achievements, and much more.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect17">
-                    <p class="lead heading anchorme">
-                        <strong>The PC is better equipped for online play than a console</strong>
-                    </p>
-                    <p class="indented">
-                        Since PCs have more processing power and faster networking speeds (that can be continually upgraded), you have the option of more enemies, more players, more action, quicker and clearer voice communication, lower latency, and much more. Developers and hobbyist server hosts have made great leaps in recent. Thought that 64 player Battelefield was great? Some games have up to <em>10,000</em> players in a single FPS match!
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect18">
-                    <p class="lead heading anchorme">
-                        <strong>PC games can be modded, and console games (legally and logically) cannot</strong>
-                    </p>
-                    <p class="indented">
-                        Have you ever beat a game and felt the rush of depression when the last cutscene ends and you're sent back to the main menu? Well, on a console, you'd either be done with the game or just play an almost exact playthrough again. Fortunately for PC gamers, there are a plethora of mods for most of our games that extend the replayability for hundreds, even thousands of hours! Mods can add new areas, new gamemodes, new characters, new items, <a href="http://imgur.com/a/KRywv">greatly improve graphics</a>, and the best part is that they're generally very easy to install. This can't be done on a console, without a modded game disc, and then modding your console to accept, which would most likely end with you not being able to play online, and may even get you into some <a href="http://arstechnica.com/gaming/2009/08/modder-arrest-a-reminder-that-most-console-hacks-are-illegal/">legal trouble</a>. (However, Nintendo allows <a href="http://projectmgame.com/en/about">modding of the Wii</a>, one of the few consoles that are not evil when it comes to modding). Not to mention, <a href="http://www.youtube.com/watch?v=TvNzj0GVMDI"> mod support is tremendously helpful to gamers, games, and developers</a>. Plus, thanks to modding communities, PC games essentially age in reverse. Meaning, they get even better looking as time goes on. <a href="http://www.youtube.com/watch?v=Ynxg0xnrLZ0">Take a look at GTA IV as of January 2014 if you don't believe it</a>.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect19">
-                    <p class="lead heading anchorme">
-                        <strong>PCs come in many shapes and sizes</strong>
-                    </p>
-                    <p class="indented">
-                        With a console, you're stuck with the design you get, and hope some cool (but overpriced) limited edition console is released or a redesign happens. But with a PC, you can build it small or large, square, round, flat, tall, however you want. <em>You</em> decide what your PC looks like and how best it would fit and look in your home. You can get a PC that's more energy efficient than a console, or one that's quieter (and we're talking dead quiet here). While consoles may be ok in their size and volume, PCs take the cake in every department.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect20">
-                    <p class="lead heading anchorme">
-                        <strong>A <em>Personal Computer</em> can be used as a tax write-off, whereas a <em>gaming</em> console cannot</strong>
-                    </p>
-                    <p>
-                        If you can prove you work on it, you can write it off. Even it has a R9 290x or a Titan Z. As we've seen in recent years, owning a GPU no longer means you're just gaming, what with all the new porudcitivity tools making use of OpenCL and other GPU compute features. If your work software uses it, the IRS has no business saying you can't play on it as well.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect21">
-                    <p class="lead heading anchorme">
-                        <strong>The human eye <em>can</em> see the difference between 30 FPS and 60 FPS</strong>
-                    </p>
-                    <p class="indented">
-                        Contrary to the uneducated hordes you'd find on YouTube comments, <a href="https://www.youtube.com/watch?v=Ie2dN418GTA">you <em>can easily</em> see the difference between 30 and 60 FPS</a>. One major source of this heading (which will soon be fixed) is YouTube itself. People will post "1080p 60 FPS" gameplay, and when people compare that to 30 FPS gameplay on other YouTube videos, they see no difference. This is because YouTube currently caps the framerate at 30, therefore making any videos with a higher framerate a waste of time to compare with. Another source is people's own hardware, though this is mainly when concerning 60+ FPS. Many mainstream monitors are capped between 50 - 60 Hz for their refresh rate, which is how many times the screen can refresh the picture per second. If the refresh rate is lower than your FPS, you'll only see it up to the refresh rate. (And sometimes screen tearing becomes an issue) The last and final source of confusion on this matter is whether or not the human eye can distinguish between the individual frames rather than see them as a slideshow. The answer is no, they cannot... which is the entire point! You can, however, see an improvement in fluidity when the Hz (hertz/refresh rate/FPS) of your system and display are increased. <a href="http://www.testufo.com/#test=framerates">Here's an in-browser 30-vs-60 test if you still don't believe it, and another with actual game footageL</a>.
-                    </p>
-                    <p class="indented">
-                        Also, the argument of ~24 FPS providing a cinematic experience is completely false. <a href="http://web.archive.org/web/20110708155615/http://www.cinemaweb.com/silentfilm/bookshelf/18_kb_2.htm">Back when the film industry started to pick up in the 1930s, any framerate higher would use too much physical film, and any lower made it hard to sync audio</a>. Nowadays, more and more movies are starting to use higher framerates during recording.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect22">
-                    <p class="lead heading anchorme">
-                        <strong>Anything with a framerate below 46 FPS could strain your eyes</strong>
-                    </p>
-                    <p class="indented">
-                        The majority of console titles target 30 (at 1080p) and occasionally a smooth 60 (although at a meager 720p). Due to the severe hardware limitations of the PS4 and XBox One, almost no titles at the time of this writing are capable of both 1080p and 60FPS. <a href="http://en.wikipedia.org/wiki/Frame_rate#Background">Thomas Edison himself concluded</a> that anything below 46FPS will strain the human eye, with strain increasing as the framerate lowers. This was back in the days of film strips, so the bar is probably a bit lower now than it was then, but eye strain still exists and there's a way to avoid it.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect23">
-                    <p class="lead heading anchorme">
-                        <strong>The human eye can see the difference between 60 FOV and 90 FOV</strong>
-                    </p>
-                    <p class="indented">
-                        It's hilarious that some people would try to argue this, yet they sometimes do. The problem with a lot of console titles is that the developers have to narrow the field of view to reduce the stress on their target console's weaker hardware. To give you a glimpse of what you're missing out on, see <a href="http://i.imgur.com/eXJoz8N.gif">this image</a>. Although some titles have the same field of view across all platforms, ones that are graphically intensive (like Battlefield 4, Skyrim, COD, etc) will often have a reduced FOV on the console version. The best part of it all, if you really do prefer a lower FOV in a given name or need to lower it for medical reasons (vertigo, etc) the PC version will almost always offer an FOV slider or other way to change the FOV. The <a href="http://pcgamingwiki.com/wiki/Category:Games">PCGamingWiki</a> is an absolutely superb resource for information on how to tweak the FOV (among other things, like resolution and detail).
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect24">
-                    <p class="lead heading anchorme">
-                        <strong>Academic studies have proven that higher framerates increase player performance</strong>
-                    </p>
-                    <p class="indented">
-                        Researchers at the University of Massachusetts have <a href="http://web.cs.wpi.edu/~claypool/papers/fr-rez/paper.pdf">determined though observation</a> that not only is the difference noticeable, but player performance increases logarithmically up to 60FPS (logarithmically means the largest increases happen early on and begin to taper off, see rough example <a href="https://people.richland.edu/james/lecture/m116/logs/logarithmic.gif">here</a>). Unfortunately, they didn't test with framerates <em>over</em> 60, so we can intelligently theorize (but not scientifically prove) that this also applies to framerates beyond 60. They also concluded (since the curve is logarithmic) that framerates lower than 30 get almost exponentially worse, which is unfortunate because almost every "next-gen" demo so far has shown to dip as low as 10-20FPS while rendering heavier scenes.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect25">
-                    <p class="lead heading anchorme">
-                        <strong>As time goes on, consoles don't get stronger and PCs don't get weaker</strong>
-                    </p>
-                    <p class="indented">
-                        Some people claim that consoles get better performance during their lifecycles due to "optimization" and that PCs somehow get slower and need upgrades to keep up. That's just false. While developers will figure out how to better use the console hardware that they have and may make better looking games after some time, they make the same, if not better, optimizations for PC hardware. And really, the optimization argument only applied to the XBox 360 and PS3, as they <a href="https://www.youtube.com/watch?v=5K5Opymw0p0">used new hardware that the industry was very unfamiliar with</a> and needed time to learn. This time around, the XBox One and PS4 are using x86-based processors, an architecture used by PCs for a much longer time. Any optimizations made to their games can be done just as well, if not better, on the PC versions.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect26">
-                    <p class="lead heading anchorme">
-                        <strong>After your PC loses its luster after 3-4 years, overclocking can bring it back</strong>
-                    </p>
-                    <p class="indented">
-                        I'm guessing a lot of you console gamers who owned an original PS3 or XBox 360 upgraded to the slim version when they released, for the new performance benefits that they brought. If you had a PC that's starting to get old and can't run games as well as it used to, you can easily overclock, which isn't as hard or as dangerous as it sounds. (Plus, if it's getting old, there's probably no warranty to void anyway) You could always buy new hardware, but with overclocking, you could squeeze out another year or so of use before hitting up Newegg.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect27">
-                    <p class="lead heading anchorme">
-                        <strong>You can share your Steam games with others</strong>
-                    </p>
-                    <p class="indented">
-                        With a console, sharing a game involves giving them a physical copy, which means someone will have to make trip. You also have to trust that they won't damage your disc, or else you no longer will be able to play it without buying a new one. But with <a href="http://store.steampowered.com/sharing/">Steam Family Sharing</a>, you can instantly lend your game to anyone, anywhere in the world. Unlike a physical disc, this way your game can't be broken or stolen. The only downside here is that you need to login with your account on their PC first.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect28">
-                    <p class="lead heading anchorme">
-                        <strong>The games you buy on Steam are yours forever</strong>
-                    </p>
-                    <p class="indented">
-                        Lost your PC? No problem! Just log into whatever client you used and re-download all your games. Another benefit of digital copies.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect29">
-                    <p class="lead heading anchorme">
-                        <strong>PCs are better for couch, TV, and livingroom gaming than consoles</strong>
-                    </p>
-                    <p class="indented">
-                        Just plug your PC into your TV using the HDMI port. <a href="http://www.reddit.com/r/pcmasterrace/wiki/controllerguide">Controllers</a> compliment this very well, especially since a PC can use any controller (even a combination of different ones at the same time)! However, mouse and keyboard combinations are just as easy to do if you have a proper piece of furniture to support everything. <a href="https://www.youtube.com/watch?v=2kPPv1Lph_o">Here's</a> a video  by BlackBusterCritic explaining how this is possible and fighting the misinformation spreaders that say otherwise. Another big factor is the resolution output of your PC. TVs of today are 1080p and higher; sometimes even 4K (4x as dense as 1080p)! Mainstream consoles can hardly handle 900p, let alone 1080p... Using a PC with these TVs rather than an underpowered console will ensure you hit the level of clarity the TV was designed for, not what the console drags it down to. Any resolution other than a display's native resolution will look blurry in comparison to what it was designed for, and you'll notice this pretty quick when you hook your PC up to your TV.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect30">
-                    <p class="lead heading anchorme">
-                        <strong>You can do a lot more than just gaming on your PC</strong>
-                    </p>
-                    <p class="indented">
-                        Think of it in terms of 'how much am I saving?'. Not 'how much am I spending?'. A PC can do <a href="http://www.reddit.com/r/pcmasterrace/wiki/creationguide">so many things</a> in this day and age it's ridiculous. All things considered, you can <em>still</em> get a PC for the same price of a console if you really care about price equality that much. If you're already a content creator with a powerful machine, congratulations!
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect31">
-                    <p class="lead heading anchorme">
-                        <strong>Both the PS4 and XBox One consoles are still behind mid-range gaming PCs of today</strong>
-                    </p>
-                    <p class="indented">
-                        Modern consoles like the PS4 and XBox One use an enhanced AMD A10, which is a mid-range budget processor. Back when the XBox 360 and PS3 came out, things were different. The XBox 360 and PS3 were both very competitive with equivalent PCs, and they were <strong>sold at a tremendous loss, even with their $700 price tags</strong>. Consoles now are being sold for $400-$500 and making healthy profits on the hardware alone, (at least after their first single game and round of online access payments, if not immediately) ... and yet they continue to raise the prices for online access/special services and increase their cuts for per-game sales. The last-gen prices aren't even adjusted to inflation, either! It really says something about console innovation when you have to adjust for inflation to compare across generations, doesn't it?
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect33">
-                    <p class="lead heading anchorme">
-                        <strong>You can open up your PC for cleaning, upgrades and repairs without voiding your warranty</strong>
-                    </p>
-                    <p class="indented">
-                        Let's face it. If your device relies on fan cooling or has vents, it's going to get dusty and eventually very hot. If it contains circuit boards, it's going to be susceptible to power surges and other electrical problems. It doesn't matter who builds the products or where it comes from. No electronic device is invulnerable. Luckily for you, you get to handle things yourself if/when your PC has a problem with an individual part. Consoles aren't so forgiving. If you clean it yourself, the warranty is most likely void. If a part fails, you have to send the entire thing in and wait for it to be sent back. Sometimes you can even continue using the PC while waiting for the individual part to be replaced! Things like RAM cards, hard drives, graphics cards are good examples. Get a PC and you won't have to be afraid of voiding a warranty ever again as long as you're not physically violating the warranty agreement for the part. <a href="http://i.imgur.com/2djjFBh.png">Repairing is frowned upon with the XBox most of all</a>.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect34">
-                    <p class="lead heading anchorme">
-                        <strong>PC warranties last longer, and are for individual parts, not the whole computer</strong>
-                    </p>
-                    <p class="indented">
-                        Each individual part that you view online has a warranty policy directly from the manufacturer that you can see a summary of. Many parts (like Patriot RAM) even have <em>lifetime</em> warranties. Once you receive the PC components, you'll see that a copy of the warranty (with instructions) is included. If the part goes bad within the warranty period, (1-3 years, sometimes lifetime) the company will mail you back a functional replacement. In comparison, a console requires the entire device to be sent in... <a href="http://i.imgur.com/pQPyMK1.png">sometimes <em>after</em> you've already paid more money for the warranty</a>! Disassembling it to send them the defective part would not only be difficult because the warranty would instantly be invalidated on the console, but also because the part is useless to you outside of the device (from a warranty standpoint, they won't honor it or even acknowledge the part belongs to their console).
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect35">
-                    <p class="lead heading anchorme">
-                        <strong>You can experience beautiful studio-quality voice communication for free using a PC</strong>
-                    </p>
-                    <p class="indented">
-                        With consoles, Steam, and Skype, cell phones, etc, your voice communications are routed through a server and relayed to the recipient. <a href="http://mumble.sourceforge.net/">Mumble</a> doesn't do that, it goes straight from point A to point B, which means less latency and less stutter (assuming you're hosting the Murmur server). On a PC, you have the option of hosting a Mumble (or TeamSpeak) server. Mumble is free and open source, and allows you (the server host) to set the bandwidth cap as high as you want. Both the server and client are very lightweight, but if you feel that hosting it yourself won't work you can also rent one. TeamSpeak is also an option, but Mumble is open source and nearly identical. As the host, you can decide how many rooms the server will have, the maximum occupancy, and much more. Just make sure that you port-forward if you host a Mumble server (Murmur) yourself. Oh, you could also <a href="http://www.reddit.com/r/pcmasterrace/wiki/mumbleguide">join the /r/PCMasterRace Mumble server</a>!
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect36">
-                    <p class="lead heading anchorme">
-                        <strong>All platforms have their own exclusives but PC has thousands more than any other.</strong>
-                    </p>
-                    <p class="indented">
-                        Due to the healthy, open, and competitive PC market, independent developers tend to gravitate toward the PC. Console companies are generally hostile toward independent developers and not nearly as many can so easily make their game available to console markets. With things like <a href="http://www.gog.com/">GOG</a>, <a href="http://store.steampowered.com/">Steam</a>, torrent sites (No, really! Indie developers and artists have used ThePirateBay for distribution on many occasions), and <a href="http://www.desura.com/">Desura</a>, developers have millions of PC gamers they can reach without spending a single dime. To play every console exclusive, you would have to buy both consoles anyways (yes, the largest argument is 'console' exclusives not 'PlayStation' or 'XBox', just 'console)... which puts your price point over that of a PC. Not to mention, <strong>consoles are what trudged in and created the exclusivity issue in the first place, hoping that you'd reward them for it and buy into their cancerous ecosystem</strong>. In a situation where you have a choice of many, pick the best of the group: PC.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect37">
-                    <p class="lead heading anchorme">
-                        <strong>You can use any controller with your PC, not just a single model like with consoles</strong>
-                    </p>
-                    <p class="indented">
-                        First off, mouse and keyboard is the <a href="http://www.youtube.com/watch?v=MnZvrjv1_JI">best possible input in terms of accuracy</a>. However, PCs have so many possible input methods, I can't even count them all. You've got Leap Motion, controllers for PS3, Xbox 360, SNES, NES, N64, wheels, joysticks, you name it. Console controllers are a close #2 in gamer preference on a PC. Some games (like super meat boy) can actually be easier with a controller. You can plug a <a href="http://www.amazon.com/Microsoft-Xbox-Wireless-Controller-Windows/dp/B004QRKWKQ/">console controller</a> right into your PC and be on your way. Very little configuration is needed, it just kind of works on its own after it's plugged in. The point is, on a PC, you have the freedom to use what you want, be it the traditional mouse and keyboard or the latest console controller (which require minimal setup and configuration, plug and play usually works) Isn't freedom of choice a beautiful thing?
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect38">
-                    <p class="lead heading anchorme">
-                        <strong>PC is the king of legacy game and software support</strong>
-                    </p>
-                    <p class="indented">
-                        Thanks to emulators and the raw power of modern PCs, you can run any game or application. See the <a href="http://www.reddit.com/r/pcmasterrace/wiki/emulatorguide">guide to emulation</a>! Your PC can run games from DOS, Mac OS, Commodore, NES, SNES, N64, PS1, PS2, Windows 3.1, Windows 95, 98, 2000, ME, XP, Vista, you name it. Emulators are also known to offer better control configuration (including support for <a href="http://www.youtube.com/watch?v=GUvssg721zg">any controller</a>) and graphical options that make it look <em>better</em> than the original. Games from around the 90s will need a virtual machine or <a href="http://www.dosbox.com/">DOSBox</a>, and console games would need an emulator. Did I mention that emulators and game ROMs are <a href="http://coolrom.com/roms/">free</a>? See <a href="http://www.youtube.com/watch?feature=player_detailpage&list=PLgYEU1QvJOL8aO5pYUTZya6VokBf_EtT3&v=TUhdL-ITG-M#t=362">this video</a> (6:00 - 7:40) from TekSyndicate for a more in-depth explanation. <a href="https://www.youtube.com/watch?v=oAk0_jidpA0">Here's</a> the latest XBox 360 emulator progress  and <a href="https://www.youtube.com/watch?v=N2yjoDdFIu0">here's</a> the latest PS3 emulator progress .
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect39">
-                    <p class="lead heading anchorme">
-                        <strong>You can turn one PC into many and multiply its value by "terminalizing" it</strong>
-                    </p>
-                    <p class="indented">
-                        Before you even begin reading, <a href="http://i.imgur.com/NZlT8Fe.jpg">this</a> is a diagram of what it looks like. There are software solutions out there that can essentially add a <a href="https://en.wikipedia.org/wiki/Computer_terminal">terminal</a> to your PC and allow a second user to play games and browse in parallel to whatever you're doing without even interrupting each other. All you need is a separate mouse, keyboard, and display. You can turn your single PC into up to 6. <a href="http://www.miniframe.com/technology/softxpand.html">SoftXPand</a> is the only software I know that can do this on Windows. For Linux, you have <a href="https://en.wikipedia.org/wiki/Multiseat_configuration">multiseat</a>.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect40">
-                    <p class="lead heading anchorme">
-                        <strong>With a capture card, you can pull video output from another PC or console into a display or window on your main PC</strong>
-                    </p>
-                    <p class="indented">
-                        PCs are capable of a lot, and they can save you a lot of money. One such popular method among PC gamers to access their console without buying a dedicated display is to just send their video into the PC and display it on one of their monitors. It saves power, money, and space.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect41">
-                    <p class="lead heading anchorme">
-                        <strong>A PC can be used to donate spare computational power toward the betterment of mankind...or your wallet</strong>
-                    </p>
-                    <p class="indented">
-                        Seti@Home, Folding@Home and World Community Grid are all a few of the many options you have available as a PC owner. All you have to do is install their clients, hit "Start" and relax. Whenever your PC isn't in use, it uses your otherwise idle CPU to perform small workloads and submit back to their larger projects. You can help cure cancer, find extraterrestrial life, assist in drug research, and many other things. Cheack our our folding team wiki page! This same compute power can be put toward <strong>Bitcoin/Litecoin/Dogecoin mining</strong> as well, earning thousands per year in some cases. 
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect42">
-                    <p class="lead heading anchorme">
-                        <strong>PC gaming is strong and growing, and it's not going anywhere for the foreseeable future</strong>
-                    </p>
-                    <p class="indented">
-                        For those of you that worry about jumping onto a dying horse, worry no more. The PC is profitable, <a href="http://www.howtogeek.com/183381/are-pcs-dying-of-course-not-heres-why/">stable</a>, and even growing (in some sectors) in market share <a href="http://techreport.com/news/24575/pc-gaming-market-grew-8-in-2012">every year</a>. Not only is it growing worldwide, but the only areas it has left to win a majority gaming marketshare in are <a href="http://i.imgur.com/kXjMpGa.png">Canada, the US, and Mexico</a>. So if you want to go with what's the healthiest for you and the industry...go PC. The misinformation about PC "dying" is typically spewed by angry people that want to recruit others into the ecosystem that they decided was best (probably just because they were already trapped in it). Developers (the people who make the games that drove you to choose a platform in the first place) also prefer PC, because they don't lose half of their profits to manufacturing and exorbitant fees. Lastly and most importantly, gamers are switching back. Ultimately because <a href="http://www.reddit.com/r/pcmasterrace/comments/1ypsxy/why_ive_returned_to_pc_gaming/">the PC is cheaper, more open, customizable, easier to fix, and capable of so much more</a>.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect43">
-                    <p class="lead heading anchorme">
-                        <strong>Consoles are no longer the industry innovation leaders</strong>
-                    </p>
-                    <p class="indented">
-                        Back when the SNES/N64/PSX came out, it was a different time. Now, it may seem that consoles are to thank for graphical fidelity making leaps every eight years, but they're not. The reason gaming takes a leap forward every time a new generation of consoles come out is because <em>they're what was holding it back in the first place</em>. Think about it: 70% of the target audience of any given game will have to be playable on continuously aging console hardware. That means that the developers have to make sure that their game will run on said machines, with or without the features they desire. Many of their ideas and features they could have implemented are thrown out the window because the hardware simply can't handle it. As a result, the developers are forced to sell a stripped-down product. Of course, PC users will most often get a better product if the same title lands in their hands, but it's never exactly what the developer originally expected. In some rare cases, the PC port is terrible... but only because the developers are unable to allocate as much time and money to the PC branch of the project. There's a line they have to draw somewhere in between the capabilities of the console and the capabilities of the PC. A fine example of this would be Crysis, a game which launched on consoles <a href="http://i.imgur.com/C0HPPea.jpg"><em>four years</em> after it was released on PC</a>. 
-                    </p>
-                    <p class="indented">
-                        There have been occasional instances where the developer will rebuild the game (graphically) from scratch to make sure that the PC version fulfills their vision, but even that is rare. So... the less people that are purchasing consoles, the less of a stranglehold Microsoft and Sony will have on the industry. The more people that are on PC, the more wiggle room the developers have to make their game the best it can be. If you enjoy seeing games get better, go with a PC.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect44">
-                    <p class="lead heading anchorme">
-                        <strong>Hardware companies and game companies make more money from PCs than they do consoles</strong>
-                    </p>
-                    <p class="indented">
-                        Yes, it's true. Even at full price on a console, <a href="http://www.youtube.com/watch?v=RCsgzRxIsmY">developers make more money from it being sold on Steam for 75% off</a>. Why? Because developing for PC has no per-sale royalty fees, no development kit fees, no submission fees, and no cost of physically manufacturing/shipping/stocking their finished products. Your money goes straight to the developer's pocket, and the game directly onto your PC. Hardware makers earn much healthier margins on PC as well, since they aren't relying on eventual-profit-by-volume under some tremendously long-term supply contract for Microsoft or Sony. If you care about <a href="http://i.imgur.com/9wvvcag.png">saving money for yourself</a>, go with the PC. If you care about funding developers and keeping your favorite games flowing, go with the PC. If you care about the hardware companies like AMD and nVidia that make modern gaming possible, go with the PC. Once again, consoles exist only to suck money out of developers, hardware companies, and gamers. It's plain as day: Sony and Microsoft don't care about anything but money. If they really cared about improving the state of gaming, why are they sucking every possible entity dry at every possible stage of the process? Literally, for the love of gaming, go with a PC.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect45">
-                    <p class="lead heading anchorme">
-                        <strong>Used game sales are more destructive to the industry than piracy and sales</strong>
-                    </p>
-                    <p class="indented">
-                        According to Lionhead studios, this is <a href="http://torrentfreak.com/used-video-games-market-more-damaging-than-piracy-110518/">true</a>. At least for them, anyways. It makes sense that this would affect all console developers equally, though. This won't be an issue much longer, however, because the console industry is beginning to restrict used game sales to the point where your physical game is more like a receipt than an actual game.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect46">
-                    <p class="lead heading anchorme">
-                        <strong>Piracy is actually more of a problem on consoles than on PC</strong>
-                    </p>
-                    <p class="indented">
-                        There's a lot of undeserved misinformation flying around, usually sounding something like, "PC gamers are a bunch of pirates"/"PC isn't getting this game because they're all pirates"/"Developers did this or that because they're punishing them for being pirates". In reality, as concluded by Intel's research, <a href="http://software.intel.com/en-us/blogs/2012/09/22/gaming-piracy-separating-fact-from-fiction">the majority of piracy you see today takes place on consoles</a>! The massive drop in piracy can likely be credited to easy, cheap, and even free distribution methods and services such as Good Old Games and Steam. Judging by Intel's research, it looks like the only people who really claim piracy is a massive problem on PC are the ones who are known for terrible DRM or hate it purely out of jealousy toward Valve (EA, Ubisoft).
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect47">
-                    <p class="lead heading anchorme">
-                        <strong>Most of the screenshots and gameplay you see on "next-gen" advertisements are actually from a PC</strong>
-                    </p>
-                    <p class="indented">
-                        See <a href="">this</a> image? That's Microsoft XBox team themselves at a popular game convention using PCs to demonstrate how "good" the XBox One looks! If the XBox team themselves are incapable of convincing you that PC is superior, nothing will. Seeing as <strong>all console games are developed on PCs and then skimmed down for consoles</strong>, it's only natural that they use footage from the best-looking system to try and sell their product. Sony and Microsoft both know that the truth is far from pretty, so they source their media from a high-end PC rather than a console. They think you'll forget by the time you buy their system anyhow. They don't care about it actually looking good, they just expect you to forget by the time you pay them upwards of $500 for everything. The question is, will you let them?
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect48">
-                    <p class="lead heading anchorme">
-                        <strong>Console gamers are not the enemy. Console gaming is</strong>
-                    </p>
-                    <p class="indented">
-                        They give you an inferior system, charge you money for it, and make you hold on to the pieces of junk for 8 years before they give you the option of (measly) upgrades. When you take into account the business strategy of Sony and Microsoft (not so much Nintendo), you'll find that it's all just one big greedy systematic ripoff of uneducated consumers. <a href="http://www.youtube.com/watch?v=RUAeYL7eAdI&feature=player_detailpage#t=264">They're holding <em>your</em> favorite games hostage</a> on their closed platforms because they <em>know</em> you'll buy into it. If everyone went with a PC and disregarded this disgusting behavior, these developers wouldn't be so easily convinced to support these "next-gen" consoles.. So, do yourself and the industry a favor and go with a PC. It's open, it's cheap, and it's damn powerful. Your best interests are always at hand, no matter how arrogant some of us may seem. For anyone that's offended, I am truly sorry... but if you're going to get offended over this guide then you probably had no intention of giving PC a chance in the first place. Just remember: <strong>PC gaming is superior to console gaming, but the gamers themselves are neither superior or inferior to one another: they're just people with varying degrees of understanding</strong>.
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect49">
-                    <p class="lead heading anchorme">
-                        <strong>Further Reading and other interesting links</strong>
-                    </p>
-                    <p class="indented">
-                        <ul>
-                            <li><a href="https://www.youtube.com/watch?v=YCWZ_kWTB9w">Linus explains display refresh rates, destroys low-FPS console fanatics</a></li>
-                            <li><a href="http://www.gamespot.com/articles/if-you-haven-t-tried-pc-gaming-then-it-s-about-time-you-did/1100-6420883/">It's about time you tried PC</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=Rgs3PSP-d4Y">Why do PC gamers bash console gamers?</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=A_Pnte_niJE">Turn your crappy desktop into a console-crushing gaming machine for $149</a></li>
-                            <li><a href="http://arstechnica.com/gaming/2014/04/pc-gaming-not-just-still-alive-but-still-dominant-says-pax-east-panel/">PC gaming: Not just still alive, but still growing and dominant, says PAX 2014 panel</a></li>
-                            <li><a href="http://www.forbes.com/sites/jasonevangelho/2014/04/28/as-global-pc-game-revenue-surpasses-consoles-how-long-should-console-makers-keep-fighting/">As Global PC Game Revenue Surpasses Consoles, How Long Should Console Makers Keep Fighting?</a></li>
-                            <li><a href="http://www.flickr.com/photos/15539352@N02/sets/72157636258493144/">Modded GTA IV on PC beauty shots that look like real life</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=342AX0fCnLQ">Gabe Newell, founder of Valve Software, talks about the PC</a></li>
-                            <li><a href="http://www.geek.com/games/why-now-is-the-time-to-become-a-pc-gamer-1590093/">Geek.com: Why now is the time to become a PC gamer (post PS4/XBO)</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=2kPPv1Lph_o">BlackBusterCritic attacking fake PC gamers and their claims against PC, proves them wrong LIVE</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=wiS9LC6X55Q">GameSpot: Can you build a great AMD gaming PC on a console budget?</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=BBLBmcnWqpw&t=12m37s">TotalBiscuit explains why the PC is on the rise, a better choice than consoles, and a better financial decision</a></li>
-                            <li><a href="http://www.gamespot.com/videos/reality-check-do-we-need-60-fps-on-ps4-and-xbox-on/2300-6415658/">Do we really need 60FPS as opposed to 30? A comparison.</a></li>
-                            <li><a href="https://soundcloud.com/totalbiscuit/justpeasantthings">TotalBiscuit attacks "next-gen" 30fps/720p sympathizers and explains why they're harming the industry</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=trweyxPCy9I">Battlefield Bedtime Story</a></li>
-                        </ul>
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect50">
-                    <p class="lead heading anchorme">
-                        <strong>Author's note</strong>
-                    </p>
-                    <p class="indented">
-                        "Hello, reader! I hope you liked this guide, it's taken me a long time to build. If you liked it, all I ask is that you spread the word. It makes me feel bad knowing that there are people out there with perfectly capable PCs, but they have no idea they can do half of this stuff. It makes me feel even worse knowing that there are people out there that were misled into buying consoles and paying for online access because they had no idea that a measly $100 would have turned their 'office box' into a console crusher. My goal is not to obtain money, karma, or anything else. I just wanted an area to share my knowledge with as many people as possible and I think I've found it here on <a href="http://www.reddit.com/r/PCMasterRace">/r/PCMasterRace</a>. The greatest reward (to me) is knowing that someone was able to make a better purchase because of this guide. Thanks for reading, and if you really liked it or have any questions, please send me a PM and let me know! <a href="http://www.reddit.com/message/compose/?to=Tizaki&subject=Guide&message=Hello.">Contact me</a> to leave feedback."<br>
-                        - <a href="http://www.reddit.com/u/Tizaki">/u/Tizaki</a>
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect51">
-                    <p class="lead heading anchorme">
-                        <strong>Editor's Note</strong>
-                    </p>
-                    <p class="indented">
-                        
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect52">
-                    <p class="lead heading anchorme">
-                        <strong>Sharing the guide with others</strong>
-                    </p>
-                    <p class="indented">
-                        Print it out, email it, tweet it, share it, whatever floats your boat! Also check out these flyers!
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect53">
-                    <p class="lead heading anchorme">
-                        <strong>Reader Response (For Original Guide)</strong>
-                    </p>
-                    <p>
-                        <em>"Just wanted to say thank you for making that very helpful page! [...] I felt really out of the loop and didn't know where to read up but luckily I somehow ended up on your page and read through it. [...] This page made me realize that PC gaming is the answer for me!"</em><br>
-                        - <a href="http://www.reddit.com/u/thebravelittletoker">/u/thebravelittletoker</a>
-                        <br><br>
-                        <em>"I had a hard time getting my friends to switch over and play on PC with me. One of them had already pre-ordered a PS4 and the rest were leaning toward XBoxes. Through another comment chain on reddit I stumbled across a link here (not entirely sure what the host subreddit is) and spent an entire night reading through it. I was very happy with all the sources and links, and so were my three friends (when I showed them the guide the next night). One cancelled PS4 pre-order and a couple of Steam sales later, we now have semi-popularity in the Streaming world thanks to our assortment of PCs. I hope the link to this never disappears!"</em><br> 
-                        - <a href="http://www.reddit.com/u/masXXi">/u/masXXi</a>
-                        <br><br>
-                        <em>"Hey, just wanted to say great work on the guide. I've been dabbling between getting a next-gen console or a good gaming PC, but you've made up my mind for sure."</em><br>
-                        - <a href="http://www.reddit.com/u/harryisonfire">/u/harryisonfire</a>
-                        <br><br>
-                        <em>"This guide has honestly convinced me to build a Gaming PC, rather than to buy PS4/XB1. It's probably old here, but damn. Can't really think of any differing points to what was mentioned in this site."</em><br>
-                        - <a href="http://www.gamefaqs.com/boards/916373-pc/68677466">Cocopups0</a>
-                        <br><br>
-                        <em>"Great read, very well thought out and easy to follow!"</em><br>
-                        - <a href="http://www.reddit.com/u/_edge_case">/u/_edge_case</a>
-                        <br><br>
-                        <em>"I've been a console and PC gamer for my entire life, but never really accepted the argument that PCs were significantly better than consoles until I read your detailed and fantastic explanation on the PC Master Race sub."</em><br>
-                        - <a href="http://www.reddit.com/u/chaltak">/u/chaltak</a>
-                        <br><br>
-                        <em>"Your guide has shown me the light. Although the last generation was bad, this current generation of consoles truly sucks. I was thinking of getting a Wii U next month, and PS4 after that. Instead, I'm going to take that money and upgrade my PC."</em><br>
-                        - <a href="http://www.reddit.com/u/Bleachi">/u/Bleachi</a>
-                        <br><br>
-                        <em>"I'd like to commend you for creating such a detailed explanation. All the arguments I could ever need [...] are all in this guide. Thank you so much. You're doing GabeN's work, son. Don't stop."</em><br>
-                        - <a href="http://www.reddit.com/u/exploitativity">/u/exploitativity</a>
-                        <br><br>
-                        <em>"This is the best guide I've seen, as it is very detailed and complete."</em><br>
-                        - <a href="http://www.reddit.com/u/x_x_x_x_x">/u/x_x_x_x_x</a>
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect54">
-                    <p class="lead heading anchorme">
-                        <strong>Translations (Google Powered)</strong>
-                    </p>
-                    <p class="indented">
-                        
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect55">
-                    <p class="lead heading anchorme">
-                        <strong>Statistics</strong>
-                    </p>
-                    <p class="indented">
-                        
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect56">
-                    <p class="lead heading anchorme">
-                        <strong>Suggestions</strong>
-                    </p>
-                    <p class="indented">
-                        Have a suggestion? <a href="mailto:rudytheninja@gmail.com?subject=Why%20PC?%20Suggestion">Email me</a>!
-                    </p>
-                </section>
-                <section class="pcfact anchored" id="sect57">
-                    <p class="lead heading anchorme">
-                        <strong>Poll</strong>
-                    </p>
-                    <p class="indented">
-                        I'd love it if you answered this.
-                    </p>
-                </section>
-            </div>
-        </main>
-        <footer>
-            <div>
-                Design by <img src="assets/images/rooday.png" width="20" height="20">OODAY
-            </div>
-            <div id="credits">
-                Credits
-                <ul>
-                    <li><a href="">Menu Hamburger</a></li>
-                    <li><a href="">Glyphicons Halflings</a></li>
-                    <li><a href="">/u/Tizaki</a> for original content</li>
-                    <li><a href="">jxnblck</a> for loading svg</li>
-                </ul>
-            </div>
-            <div>
-                Original Wiki Pages
-            </div>
-            <div>
-                Powered by
-            </div>
+          </div>
         </footer>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/zeroclipboard.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/vendor/anchor.js"></script>
-        <script src="js/copylink.js"></script>
-        <script src="videojs/video.js"></script>
-        <script>
-          videojs.options.flash.swf = "videojs/video-js.swf"
-        </script>
-        <script>
-            (function($){
-                $(window).load(function(){
-                    $("body, #links").mCustomScrollbar();
-                });
-            })(jQuery);
-        </script>
-        <script src="js/easter.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+      </main>
+	</div>
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  </body>
 </html>
