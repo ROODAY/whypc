@@ -86,3 +86,11 @@ img {
   max-width: 100% !important;
   margin: auto;
 }
+
+p {
+  font-size: 16px !important;
+}
+
+small {
+  font-size: 12px !important;
+}
