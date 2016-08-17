@@ -94,3 +94,7 @@ p {
 small {
   font-size: 12px !important;
 }
+
+ul, ol {
+    font-size: 16px !important;
+}
