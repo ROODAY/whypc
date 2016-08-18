@@ -89,6 +89,7 @@ img {
 
 p {
   font-size: 16px !important;
+  word-wrap: break-word;
 }
 
 small {
@@ -97,4 +98,26 @@ small {
 
 ul, ol {
     font-size: 16px !important;
+}
+
+.mdl-mini-footer--link-list > li > a {
+  transition: color 0.5s ease;
+  font-size: 16px !important;
+}
+
+.mdl-mini-footer--link-list > li > a:hover {
+  color: #fff !important;
+}
+
+svg {
+  fill: rgba(68, 68, 68, 0.25) !important;
+  transition: fill 0.5s ease;
+}
+
+svg:hover {
+  fill: rgba(68, 68, 68, 1.0) !important;
+}
+
+.clipboard-link {
+  vertical-align: top;
 }
